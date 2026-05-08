@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free IUOE Aptitude Test Practice — 40 Questions | Dirt School</title>
+<meta name="description" content="Free 40-question IUOE aptitude test practice exam. Math, mechanical reasoning, reading, spatial. Instant scoring. No signup. Built by operators.">
+<link rel="canonical" href="https://dirtschool.ca/practice-tests/iuoe-practice-test.html">
+<link rel="stylesheet" href="practice-test.css">
+</head>
+<body>
+<div class="container">
+  <a class="back-link" href="/">← Back to Dirt School</a>
+  <div class="header">
+    <h1>Free <span class="accent">IUOE Aptitude Test</span> Practice</h1>
+    <p>40 questions • Instant scoring • No signup</p>
+  </div>
+  <div id="start-screen" class="start-screen"></div>
+  <div id="test-screen" class="test-screen"></div>
+  <div id="results-screen" class="results-screen"></div>
+  <footer>
+    Built by operators, for operators. © Dirt School · <a href="https://dirtschool.ca">dirtschool.ca</a>
+  </footer>
+</div>
+
+<script>
+const TEST_CONFIG = {
+  title: "IUOE Aptitude Test — Free Practice",
+  description: "BC/Yukon Local 115 style. Math, mechanical, reading, spatial.",
+  guideName: "IUOE Aptitude Test",
+  guideUrl: "https://dirtschool.gumroad.com/l/iuoe-study-guide",
+  timeLimitMin: 60,
+  passMark: 70,
+  shuffle: false,
+  instructions: "You have 60 minutes. 4 sections: math, mechanical reasoning, reading, spatial. No calculator on the real test — try to do it in your head or on scrap paper.",
+  questions: [
+    // ---------- MATH (12) ----------
+    { category: "Math", q: "A haul truck holds 30 tonnes. The pit has 540 tonnes to move. How many full loads?", options: ["16", "17", "18", "19"], answer: 2, explanation: "540 ÷ 30 = 18 full loads exactly." },
+    { category: "Math", q: "A trench is 60 m long, 1.2 m wide, 1.5 m deep. What is the volume in cubic metres?", options: ["72 m³", "108 m³", "120 m³", "144 m³"], answer: 1, explanation: "60 × 1.2 × 1.5 = 108 m³." },
+    { category: "Math", q: "A grade rises 1.5 m over 30 m of run. What is the percent grade?", options: ["3%", "5%", "7.5%", "15%"], answer: 1, explanation: "Rise / Run × 100 = 1.5 / 30 × 100 = 5%." },
+    { category: "Math", q: "A Cat 330 excavator bucket holds 1.9 m³. How many buckets fill a 38 m³ truck?", options: ["18", "20", "22", "24"], answer: 1, explanation: "38 ÷ 1.9 = 20 buckets." },
+    { category: "Math", q: "Convert 4.5 metres to feet (use 1 m ≈ 3.28 ft).", options: ["12.4 ft", "13.8 ft", "14.8 ft", "15.2 ft"], answer: 2, explanation: "4.5 × 3.28 = 14.76, rounds to 14.8 ft." },
+    { category: "Math", q: "A dozer pushes 220 m³ in an 8-hour shift. What's the production rate per hour?", options: ["22.5 m³/h", "25 m³/h", "27.5 m³/h", "30 m³/h"], answer: 2, explanation: "220 ÷ 8 = 27.5 m³/h." },
+    { category: "Math", q: "Fuel costs $1.85/L. The machine burns 32 L/h. Cost for a 10-hour shift?", options: ["$555", "$592", "$620", "$648"], answer: 1, explanation: "32 × 10 × $1.85 = $592." },
+    { category: "Math", q: "A loader cycle: load 8 sec, swing 4 sec, dump 3 sec, return 4 sec. Cycles per hour?", options: ["180", "189", "200", "210"], answer: 1, explanation: "Total cycle = 19 sec. 3600 ÷ 19 ≈ 189 cycles/h." },
+    { category: "Math", q: "Cut volume is 800 m³, fill required is 1,000 m³. Shortfall to import?", options: ["100 m³", "200 m³", "250 m³", "300 m³"], answer: 1, explanation: "1000 − 800 = 200 m³ short. Truck it in." },
+    { category: "Math", q: "Soil swells 25% when excavated. A 100 m³ in-place cut becomes how much loose?", options: ["110 m³", "115 m³", "125 m³", "150 m³"], answer: 2, explanation: "100 × 1.25 = 125 m³ loose volume." },
+    { category: "Math", q: "If 1 m³ of gravel weighs 1.6 tonnes, what does a 6 m³ truck load weigh?", options: ["8.6 t", "9.6 t", "10.6 t", "11.6 t"], answer: 1, explanation: "6 × 1.6 = 9.6 tonnes." },
+    { category: "Math", q: "An operator works 8 hours at $42/hr base, then 4 hours overtime at 1.5×. Total pay?", options: ["$504", "$588", "$672", "$756"], answer: 1, explanation: "Base: 8 × $42 = $336. OT: 4 × $63 = $252. Total = $588." },
+
+    // ---------- MECHANICAL (10) ----------
+    { category: "Mechanical Reasoning", q: "Two gears mesh. The drive gear has 20 teeth, the driven has 60 teeth. If drive spins at 300 RPM, driven spins at:", options: ["100 RPM", "150 RPM", "300 RPM", "900 RPM"], answer: 0, explanation: "Larger driven gear = slower. 300 × (20/60) = 100 RPM." },
+    { category: "Mechanical Reasoning", q: "A first-class lever has the fulcrum between the load and effort. Example?", options: ["Wheelbarrow", "Crowbar prying a rock", "Fishing rod", "Tweezers"], answer: 1, explanation: "Crowbar = first-class. Wheelbarrow = second-class. Tweezers/rod = third-class." },
+    { category: "Mechanical Reasoning", q: "In a 4-pulley block-and-tackle system, lifting a 400 kg load requires (ignoring friction):", options: ["100 kg of force", "200 kg", "400 kg", "800 kg"], answer: 0, explanation: "Mechanical advantage = number of supporting ropes. 400 ÷ 4 = 100 kg." },
+    { category: "Mechanical Reasoning", q: "Hydraulic cylinder A has a 50 mm piston, B has a 100 mm piston. Same pressure. B produces:", options: ["The same force", "Twice the force", "Four times the force", "Half the force"], answer: 2, explanation: "Force = pressure × area. Area scales with diameter squared. (100/50)² = 4×." },
+    { category: "Mechanical Reasoning", q: "A belt connects two pulleys. The drive pulley is small, the driven pulley is large. The driven pulley turns:", options: ["Faster", "Slower", "Same speed", "Backwards"], answer: 1, explanation: "Larger driven pulley = slower rotation but more torque." },
+    { category: "Mechanical Reasoning", q: "Three gears in a row. Gear 1 turns clockwise. Gear 3 turns:", options: ["Clockwise", "Counter-clockwise", "Stops", "Depends on size"], answer: 0, explanation: "Each meshed gear reverses direction. 1 CW → 2 CCW → 3 CW." },
+    { category: "Mechanical Reasoning", q: "Why does a hydraulic excavator move so much earth with a small engine?", options: ["Hydraulic fluid is heavy", "Pressure × area = force, multiplying engine power", "Diesel engines are stronger", "Tracks add power"], answer: 1, explanation: "Hydraulics multiply force through pressure and piston area." },
+    { category: "Mechanical Reasoning", q: "A wheel and axle is what type of simple machine?", options: ["A type of pulley", "A modified lever", "A wedge", "An inclined plane"], answer: 1, explanation: "A wheel and axle is a rotating lever — the axle is the fulcrum." },
+    { category: "Mechanical Reasoning", q: "What happens to engine torque when you shift to a higher gear?", options: ["Torque increases, speed decreases", "Torque decreases, speed increases", "Both increase", "Both decrease"], answer: 1, explanation: "Higher gear = more speed, less torque. Lower gear = more torque, less speed." },
+    { category: "Mechanical Reasoning", q: "A spring-loaded valve opens at a certain pressure. If you increase the spring's stiffness, the valve opens at:", options: ["Lower pressure", "Higher pressure", "Same pressure", "Won't open"], answer: 1, explanation: "Stiffer spring needs more pressure to compress and open the valve." },
+
+    // ---------- READING (8) ----------
+    { category: "Reading Comprehension", q: "A safety bulletin reads: 'Operators must not exit the cab while the machine is running unless the swing brake is engaged AND the bucket is grounded.' If only the bucket is grounded, can the operator exit?", options: ["Yes", "No", "Only if engine is idling", "Only with foreman approval"], answer: 1, explanation: "BOTH conditions required. AND means both, not either." },
+    { category: "Reading Comprehension", q: "'Daily inspections shall be performed prior to operation, and any defects classified as Major must be reported immediately to the supervisor.' What must happen first?", options: ["Report defects", "Perform inspection", "Call supervisor", "Operate machine"], answer: 1, explanation: "'Prior to operation' = inspection comes first." },
+    { category: "Reading Comprehension", q: "'Lockout-tagout (LOTO) procedures apply to all energy sources, including hydraulic, pneumatic, electrical, and stored mechanical energy.' Is gravity included?", options: ["Yes — stored mechanical energy", "No — only listed types", "Only if the load is over 1 tonne", "Only with a permit"], answer: 0, explanation: "A raised bucket has stored mechanical energy from gravity — covered." },
+    { category: "Reading Comprehension", q: "'No worker shall operate equipment for more than 13 hours of work in a 24-hour period, including travel time to/from the work site.' Travel is 1.5 hours each way. Maximum work hours allowed?", options: ["13 hours", "11.5 hours", "10 hours", "13 + travel"], answer: 2, explanation: "13 total includes travel. 13 − 3 = 10 hours of work." },
+    { category: "Reading Comprehension", q: "A sign reads: 'AUTHORIZED PERSONNEL ONLY beyond this point. Hard hats, hi-vis, and steel-toed boots required at all times.' A delivery driver in runners has paperwork. Can they enter?", options: ["Yes — they have paperwork", "No — missing PPE", "Yes — if escorted", "Only during business hours"], answer: 1, explanation: "Sign requires PPE 'at all times' regardless of authorization." },
+    { category: "Reading Comprehension", q: "'In the event of equipment malfunction, the operator shall immediately cease operation, secure the machine, and notify maintenance. Continued operation is grounds for dismissal.' What's NOT permitted?", options: ["Stopping the machine", "Calling maintenance", "Operating after a malfunction", "Securing the bucket"], answer: 2, explanation: "'Continued operation is grounds for dismissal.'" },
+    { category: "Reading Comprehension", q: "'Spotters are required when reversing within 3 metres of any worker, structure, or excavation edge.' A loader is backing 4 metres from a trench. Spotter required?", options: ["Yes — always", "No — outside the 3 m range", "Only if a worker is nearby", "Only if foreman is on site"], answer: 1, explanation: "4 m is outside the 3 m trigger distance." },
+    { category: "Reading Comprehension", q: "'Hot work permits are required for any cutting, welding, or grinding within 10 m of flammable materials.' Welder is grinding 15 m from a fuel tank. Permit needed?", options: ["Yes", "No", "Only if welding", "Only after sundown"], answer: 1, explanation: "15 m is outside the 10 m radius. No permit triggered by this rule." },
+
+    // ---------- SPATIAL (10) ----------
+    { category: "Spatial Reasoning", q: "An excavator faces north. The operator swings the house 90° to the right (clockwise). The boom now points:", options: ["North", "East", "South", "West"], answer: 1, explanation: "Right = east. 90° clockwise from north." },
+    { category: "Spatial Reasoning", q: "A dozer is facing east. From the operator's seat, which compass direction is to their LEFT?", options: ["North", "South", "East", "West"], answer: 0, explanation: "Facing east: left = north, right = south, behind = west." },
+    { category: "Spatial Reasoning", q: "A pile of dirt is 5 m long, 3 m wide, 2 m tall (rectangular). What's its volume?", options: ["10 m³", "20 m³", "30 m³", "40 m³"], answer: 2, explanation: "5 × 3 × 2 = 30 m³." },
+    { category: "Spatial Reasoning", q: "Two stakes mark a slope. The blue stake reads CUT 1.2 and the red stake reads FILL 0.8. The red stake area needs:", options: ["Material removed", "Material added", "No change", "Recompacted"], answer: 1, explanation: "FILL = bring material in to raise grade." },
+    { category: "Spatial Reasoning", q: "Looking at a flat plan view of a job site, north is up. A truck enters from the bottom-right corner. It is heading:", options: ["Northwest", "Northeast", "Southeast", "Southwest"], answer: 0, explanation: "Bottom-right = southeast corner, heading inward = northwest." },
+    { category: "Spatial Reasoning", q: "A ramp is 12 m long with a 1 m rise. What's the slope ratio (run:rise)?", options: ["6:1", "10:1", "12:1", "15:1"], answer: 2, explanation: "Run:Rise = 12:1." },
+    { category: "Spatial Reasoning", q: "An object is rotated 180°. A shape that originally pointed up-right now points:", options: ["Up-left", "Down-left", "Down-right", "Same direction"], answer: 1, explanation: "180° flips both axes. Up-right → down-left." },
+    { category: "Spatial Reasoning", q: "A trench is benched at 1:1 slope on both sides, 3 m deep, 2 m wide at the bottom. Width at the top?", options: ["5 m", "6 m", "7 m", "8 m"], answer: 3, explanation: "Each side adds 3 m (1:1 means horizontal = vertical). 2 + 3 + 3 = 8 m." },
+    { category: "Spatial Reasoning", q: "You're walking around a square building clockwise. After 3 corners, you're walking:", options: ["The same direction you started", "90° right of start", "180° opposite", "90° left of start"], answer: 3, explanation: "3 right turns = 270° clockwise = same as 90° counter-clockwise = 90° left of start direction." },
+    { category: "Spatial Reasoning", q: "An excavator's cab is at the rear, boom forward. Operator swings 180°. Boom now points:", options: ["Same direction", "Toward the rear", "Sideways left", "Sideways right"], answer: 1, explanation: "180° swing = boom now points opposite direction = toward where the rear was." }
+  ]
+};
+</script>
+<script src="practice-test.js"></script>
+</body>
+</html>

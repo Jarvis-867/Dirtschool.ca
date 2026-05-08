@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heavy Equipment Operator Math — Every Formula You'll Actually Use</title>
+    <link rel="canonical" href="https://dirtschool.ca/blog/heavy-equipment-operator-math-formulas/">
+
+    <meta name="description" content="Complete formula reference for operators, foremen, and apprentices. Earthwork, grade, production, material math, and conversions.">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.8; color: #333; max-width: 1000px; margin: 0 auto; padding: 20px; }
+        h1 { color: #000; font-size: 2.2em; margin-bottom: 0.3em; }
+        h2 { color: #ff8c00; font-size: 1.6em; margin-top: 1.8em; border-bottom: 2px solid #ff8c00; padding-bottom: 0.5em; }
+        h3 { color: #ff8c00; font-size: 1.2em; margin-top: 1.2em; }
+        .article-meta { color: #999; font-size: 0.95em; margin-bottom: 2em; }
+        .formula { background: #f5f5f5; padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace; margin: 15px 0; overflow-x: auto; }
+        .highlight-box { background: #fff3e0; padding: 15px; border-left: 4px solid #ff8c00; margin: 15px 0; }
+        .note { background: #e8f4f8; padding: 15px; border-left: 4px solid #0099cc; margin: 15px 0; }
+        ul, ol { margin: 15px 0; padding-left: 20px; }
+        li { margin: 8px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #f5f5f5; font-weight: bold; }
+        strong { color: #ff8c00; }
+        .toc { background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        .toc h3 { margin-top: 0; }
+        .toc ul { margin: 10px 0; padding-left: 30px; }
+        .toc li { margin: 5px 0; }
+        .toc a { color: #ff8c00; text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Heavy Equipment Operator Math — Every Formula You'll Actually Use</h1>
+    <div class="article-meta">Posted April 17, 2026 | Math & Formulas | Reference | Read time: 18 min</div>
+
+    <p><em>The complete formula reference for operators, foremen, and apprentices. Bookmark this page. You'll come back.</em></p>
+
+    <p>Every heavy equipment operator eventually hits the same wall: you need to run a calculation in the field, you can't remember the formula, and the person who could tell you is on another machine 400 yards away.</p>
+
+    <p>This article fixes that. Every formula an operator, foreman, or estimator actually uses on a job site is below — with the formula, a plain-English explanation, a worked example, and a link to the live calculator.</p>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><strong>Earthwork Math</strong>
+                <ul>
+                    <li><a href="#volume">Volume of a Rectangular Cut</a></li>
+                    <li><a href="#swell">Swell Factor (Bank → Loose)</a></li>
+                    <li><a href="#shrink">Shrink Factor (Bank → Compacted)</a></li>
+                </ul>
+            </li>
+            <li><strong>Grade and Slope</strong>
+                <ul>
+                    <li><a href="#grade">Percent Grade</a></li>
+                    <li><a href="#slope-ratio">Slope Ratio</a></li>
+                </ul>
+            </li>
+            <li><strong>Production and Haul</strong>
+                <ul>
+                    <li><a href="#cycle-time">Truck Cycle Time</a></li>
+                    <li><a href="#truck-loads">Truck Loads to Finish a Job</a></li>
+                    <li><a href="#haul-match">Haul Truck Match</a></li>
+                    <li><a href="#dozer">Dozer Production</a></li>
+                </ul>
+            </li>
+            <li><strong>Material & Cost</strong>
+                <ul>
+                    <li><a href="#fuel">Fuel Cost</a></li>
+                    <li><a href="#equipment-cost">Equipment Cost Per Hour</a></li>
+                    <li><a href="#operator-wage">Operator Wage</a></li>
+                    <li><a href="#hydraulics">Hydraulic Force (Pascal's Law)</a></li>
+                </ul>
+            </li>
+            <li><strong>Unit Conversions</strong></li>
+        </ul>
+    </div>
+
+    <h2 id="volume">Volume of a Rectangular Cut or Pad</h2>
+    <p><strong>Formula:</strong></p>
+    <div class="formula">Volume = Length × Width × Depth
+Cubic Yards = (L × W × D) ÷ 27</div>
+
+    <p>The foundation formula. Everything in earthwork builds from this. Multiply the three dimensions, convert to cubic yards by dividing by 27.</p>
+
+    <p><strong>Worked example:</strong> Building pad 80 ft × 50 ft × 2 ft deep:</p>
+    <div class="formula">Volume = 80 × 50 × 2 = 8,000 cubic feet
+Cubic yards = 8,000 ÷ 27 = 296 BCY</div>
+
+    <h2 id="swell">Swell Factor (Bank → Loose)</h2>
+    <p><strong>Formula:</strong></p>
+    <div class="formula">Loose Volume = Bank Volume × (1 + Swell %)</div>
+
+    <p>Soil expands when you dig it out because air gets introduced between particles.</p>
+
+    <table>
+        <tr>
+            <th>Material</th>
+            <th>Swell %</th>
+        </tr>
+        <tr>
+            <td>Gravel</td>
+            <td>8–12%</td>
+        </tr>
+        <tr>
+            <td>Sand (dry)</td>
+            <td>10–15%</td>
+        </tr>
+        <tr>
+            <td>Common earth</td>
+            <td>20–25%</td>
+        </tr>
+        <tr>
+            <td>Clay</td>
+            <td>25–35%</td>
+        </tr>
+        <tr>
+            <td>Rock (blasted)</td>
+            <td>35–50%</td>
+        </tr>
+    </table>
+
+    <p><strong>Worked example:</strong> 400 BCY of clay with 30% swell:</p>
+    <div class="formula">LCY = 400 × 1.30 = 520 LCY</div>
+
+    <p>You're hauling 520 loose cubic yards on trucks, not 400. Critical for planning haul truck capacity.</p>
+
+    <h2 id="shrink">Shrink Factor (Bank → Compacted)</h2>
+    <p><strong>Formula (working backwards from required fill):</strong></p>
+    <div class="formula">Bank Volume Required = Compacted Volume ÷ (1 − Shrink %)</div>
+
+    <p>When loose fill is compacted, it shrinks smaller than its original bank volume. To know how much material you need to dig, work backwards.</p>
+
+    <table>
+        <tr>
+            <th>Material</th>
+            <th>Shrink %</th>
+        </tr>
+        <tr>
+            <td>Gravel</td>
+            <td>5–8%</td>
+        </tr>
+        <tr>
+            <td>Sand</td>
+            <td>5–10%</td>
+        </tr>
+        <tr>
+            <td>Common earth</td>
+            <td>10–15%</td>
+        </tr>
+        <tr>
+            <td>Clay</td>
+            <td>15–25%</td>
+        </tr>
+    </table>
+
+    <p><strong>Worked example:</strong> Need 500 CCY of common earth fill with 12% shrink:</p>
+    <div class="formula">Bank required = 500 ÷ (1 − 0.12) = 500 ÷ 0.88 = 568 BCY</div>
+
+    <p>You need 568 BCY in the ground to produce 500 CCY of compacted fill.</p>
+
+    <h2 id="grade">Percent Grade</h2>
+    <p><strong>Formula:</strong></p>
+    <div class="formula">Grade % = (Rise ÷ Run) × 100</div>
+
+    <p>The most important grade formula in the trade. Rise is vertical distance, run is horizontal distance.</p>
+
+    <p><strong>Worked example:</strong> Rise of 3 feet over a run of 100 feet:</p>
+    <div class="formula">Grade = (3 ÷ 100) × 100 = 3%</div>
+
+    <p>That's a 3% grade — a common haul road or drainage slope.</p>
+
+    <h2 id="slope-ratio">Slope Ratio</h2>
+    <p><strong>Formula:</strong></p>
+    <div class="formula">Slope Ratio = Run ÷ Rise (expressed as ratio, e.g., 2:1)</div>
+
+    <p>A 2:1 slope means 2 feet horizontal for every 1 foot vertical. A 3:1 slope is gentler. A 1:1 slope is steep.</p>
+
+    <table>
+        <tr>
+            <th>Slope Ratio</th>
+            <th>Percent Grade</th>
+            <th>Angle</th>
+        </tr>
+        <tr>
+            <td>3:1</td>
+            <td>33%</td>
+            <td>18.4°</td>
+        </tr>
+        <tr>
+            <td>2:1</td>
+            <td>50%</td>
+            <td>26.6°</td>
+        </tr>
+        <tr>
+            <td>1.5:1</td>
+            <td>67%</td>
+            <td>33.7°</td>
+        </tr>
+        <tr>
+            <td>1:1</td>
+            <td>100%</td>
+            <td>45.0°</td>
+        </tr>
+    </table>
+
+    <h2 id="cycle-time">Truck Cycle Time</h2>
+    <p><strong>Formula:</strong></p>
+    <div class="formula">Cycle Time = Load Time + Haul Time + Dump Time + Return Time + Spot Time</div>
+
+    <p>How long one truck takes to make one complete trip.</p>
+
+    <p><strong>Worked example:</strong></p>
+    <div class="formula">Load: 4 min
+Haul (3 km @ 40 km/h): 4.5 min
+Dump: 1 min
+Return: 4.5 min
+Spot: 1 min
+Cycle Time = 15 minutes</div>
+
+    <p>That truck makes 4 trips per hour (60 ÷ 15).</p>
+
+    <h2 id="truck-loads">Truck Loads to Finish a Job</h2>
+    <p><strong>Formula:</strong></p>
+    <div class="formula">Loads = Loose Volume ÷ Truck Capacity</div>
+
+    <p>Use loose volume (LCY), not bank (BCY), because trucks hold loose material.</p>
+
+    <p><strong>Worked example:</strong> 600 LCY to haul. Tandem truck holds 12 LCY:</p>
+    <div class="formula">Loads = 600 ÷ 12 = 50 loads</div>
+
+    <p>At 15-minute cycles per truck, that's 750 minutes = 12.5 hours (roughly 1.5 shifts with one truck). With three trucks running: 4.2 hours.</p>
+
+    <h2 id="haul-match">Haul Truck Match (Fleet Sizing)</h2>
+    <p><strong>Formula:</strong></p>
+    <div class="formula">Number of Trucks = Cycle Time ÷ Load Time</div>
+
+    <p>How many trucks you need to keep the excavator or shovel fully loaded without idle waiting.</p>
+
+    <p><strong>Worked example:</strong> Load time 3 min. Full cycle time 18 min:</p>
+    <div class="formula">Number of trucks = 18 ÷ 3 = 6 trucks</div>
+
+    <p>Six trucks means the excavator is loading one truck while the other five are hauling, dumping, and returning.</p>
+
+    <h2 id="dozer">Dozer Production</h2>
+    <p><strong>Formula (simplified):</strong></p>
+    <div class="formula">Production (LCY/hr) = Blade Load × Cycles per Hour × Efficiency</div>
+
+    <p><strong>Reference blade loads (LCY per pass, straight blade):</strong></p>
+    <table>
+        <tr>
+            <th>Machine</th>
+            <th>Blade Capacity</th>
+        </tr>
+        <tr>
+            <td>Cat D3</td>
+            <td>3–4 LCY</td>
+        </tr>
+        <tr>
+            <td>Cat D6</td>
+            <td>8–12 LCY</td>
+        </tr>
+        <tr>
+            <td>Cat D8</td>
+            <td>14–18 LCY</td>
+        </tr>
+        <tr>
+            <td>Cat D10</td>
+            <td>30–40 LCY</td>
+        </tr>
+        <tr>
+            <td>Cat D11</td>
+            <td>45–55 LCY</td>
+        </tr>
+    </table>
+
+    <h2 id="fuel">Fuel Cost</h2>
+    <p><strong>Formula:</strong></p>
+    <div class="formula">Fuel Cost = Burn Rate (L/hr) × Hours × Fuel Price</div>
+
+    <p><strong>Reference burn rates:</strong></p>
+    <table>
+        <tr>
+            <th>Machine</th>
+            <th>L/hr (approx.)</th>
+        </tr>
+        <tr>
+            <td>Cat 320 excavator</td>
+            <td>18–24</td>
+        </tr>
+        <tr>
+            <td>Cat D6 dozer</td>
+            <td>24–32</td>
+        </tr>
+        <tr>
+            <td>Cat D10 dozer</td>
+            <td>55–70</td>
+        </tr>
+        <tr>
+            <td>Cat 740 articulated dump truck</td>
+            <td>28–40</td>
+        </tr>
+    </table>
+
+    <p><strong>Worked example:</strong> Cat D10 at 60 L/hr, 10-hour shift, $1.75/L diesel:</p>
+    <div class="formula">Fuel cost = 60 × 10 × 1.75 = $1,050 per shift</div>
+
+    <h2 id="equipment-cost">Equipment Cost Per Hour</h2>
+    <p><strong>Formula:</strong></p>
+    <div class="formula">Total Hourly Cost = Ownership + Fuel + Maintenance + Insurance + Operator</div>
+
+    <p>The real cost of running a machine per hour. Small contractors chronically underestimate this and go broke.</p>
+
+    <p><strong>Worked example (Cat 330 excavator):</strong></p>
+    <div class="formula">Ownership: $28/hr
+Fuel: $35/hr
+Maintenance: $15/hr
+Insurance: $4/hr
+Operator: $55/hr
+Total: $137/hr</div>
+
+    <p>If you're billing this machine at $125/hr, you're losing $12/hr.</p>
+
+    <h2 id="operator-wage">Operator Wage (Base + OT + LOA)</h2>
+    <p><strong>Formula:</strong></p>
+    <div class="formula">Weekly Gross = (40 × Base) + (OT Hours × Base × 1.5) + (LOA Days × LOA Rate)</div>
+
+    <p><strong>Worked example:</strong> $55/hr base. 14-on/14-off pipeline rotation. 12-hour days × 7 days = 84 hrs/week. $200/day LOA:</p>
+    <div class="formula">Base: 40 × $55 = $2,200
+OT: 44 × $55 × 1.5 = $3,630
+LOA: 7 × $200 = $1,400 (tax-free)
+Weekly gross: $7,230</div>
+
+    <div class="highlight-box">
+        <strong>Why LOA is huge:</strong> Two operators with the same $55/hr base — one works local civil (no LOA), one works pipeline. Over a year, the pipeline operator takes home $40,000–$60,000 more net from the tax-free LOA alone.
+    </div>
+
+    <h2 id="hydraulics">Pascal's Law — Force from Hydraulic Pressure</h2>
+    <p><strong>Formula:</strong></p>
+    <div class="formula">Force = Pressure × Area</div>
+
+    <p><strong>Worked example:</strong> A cylinder with a 4-inch diameter piston at 3,000 psi:</p>
+    <div class="formula">Area = π × r² = 3.14159 × 2² = 12.57 sq in
+Force = 3,000 × 12.57 = 37,700 pounds (17,000 kg)</div>
+
+    <div class="note">
+        <strong>On the test:</strong> This formula appears on every IUOE aptitude test, Red Seal exam, and NCCER evaluation. It explains why hydraulic systems lift massive loads with small cylinders — pressure multiplied by area = enormous force.
+    </div>
+
+    <h2>Unit Conversions (The One That Traps Everyone)</h2>
+    <p><strong>Volume:</strong></p>
+    <div class="formula">1 cubic yard = 27 cubic feet (NOT 9, NOT 3)
+1 cubic meter = 1.308 cubic yards</div>
+
+    <p><strong>Linear:</strong></p>
+    <div class="formula">1 foot = 12 inches
+1 yard = 3 feet
+1 kilometer = 0.621 miles</div>
+
+    <p><strong>Weight:</strong></p>
+    <div class="formula">1 ton (short) = 2,000 lbs
+1 tonne (metric) = 2,205 lbs</div>
+
+    <p><strong>Area:</strong></p>
+    <div class="formula">1 square yard = 9 sq feet
+1 acre = 43,560 sq feet</div>
+
+    <h2>One-Page Cheat Sheet</h2>
+    <p>Print this. Put it in your truck. Put it in the shop lunchroom.</p>
+
+    <div class="formula">VOLUME
+Rectangle: L × W × D ÷ 27 = CY
+Cone: ⅓ × π × r² × H
+
+SWELL / SHRINK
+Loose = Bank × (1 + Swell%)
+Bank = Compacted ÷ (1 − Shrink%)
+
+GRADE
+Grade% = (Rise ÷ Run) × 100
+
+HYDRAULICS
+Force = Pressure × Area
+
+TRUCK LOADS
+Loads = LCY ÷ Truck Capacity
+Trucks Needed = Cycle Time ÷ Load Time
+
+KEY CONVERSIONS
+27 cu ft = 1 cu yd
+1 ton = 2,000 lbs
+1 tonne = 2,205 lbs
+1 acre = 43,560 sq ft</div>
+
+    <h2>Get the Calculators</h2>
+    <p>Every formula here has a live calculator on <a href="https://dirtcalculator.ca">Dirt Calculator</a>. 22 free tools. Works offline after first install.</p>
+
+    <p><strong>Get it on your phone:</strong><br>
+    1. Visit <a href="https://dirtcalculator.ca">dirtcalculator.ca</a><br>
+    2. Tap Share → Add to Home Screen (iPhone) or install icon (Android)<br>
+    3. Done. Works offline forever.</p>
+
+    <p><strong>Studying for a test?</strong> <a href="https://dirtschool.gumroad.com">Dirt School study guides</a> include all formulas plus 60-question mock tests, answer keys, and 10-minute cram sheet:</p>
+
+    <ul>
+        <li><a href="https://dirtschool.gumroad.com/l/iuoe-study-guide">IUOE Aptitude Test — BC/Yukon</a> — $9.99</li>
+        <li><a href="https://dirtschool.gumroad.com/l/iuoe-955">IUOE Aptitude Test — Alberta</a> — $9.99</li>
+        <li><a href="https://dirtschool.gumroad.com/l/redseal-heo-guide">Red Seal HEO Study Guide</a> — $9.99</li>
+        <li><a href="https://dirtschool.gumroad.com/l/nccer-heo-guide">NCCER Heavy Equipment Guide (USA)</a> — $9.99</li>
+    </ul>
+
+    <!-- EMAIL SIGNUP FOOTER -->
+    <div style="margin-top: 3em; padding: 2em; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #ff8c00;">
+        <h3 style="margin-top: 0; color: #000; font-size: 1.2em;">Get the Free Cram Sheet</h3>
+        <p style="color: #666; margin-bottom: 1em;">Master the formulas, definitions, and quick-reference guides used on every jobsite. Free 10-minute cram sheet + email updates.</p>
+        <form style="display: flex; gap: 8px; margin-bottom: 1em;">
+            <input type="email" placeholder="Your email" required style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.95em;">
+            <button type="submit" style="padding: 10px 20px; background: #ff8c00; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Get it Free</button>
+        </form>
+        <p style="font-size: 0.85em; color: #999; margin: 0;">✓ Instant PDF download | ✓ No spam | ✓ Used by 1,000+ operators</p>
+    </div>
+<script>
+// Auto-link operator terms to glossary
+const glossaryTerms = {
+  'swell factor': '/glossary/#S',
+  'bank cubic yard': '/glossary/#B',
+  'loose cubic yard': '/glossary/#L',
+  'compacted cubic yard': '/glossary/#C',
+  'percent grade': '/glossary/#G',
+  'grade stake': '/glossary/#G',
+  'living out allowance': '/glossary/#L',
+  'LOA': '/glossary/#L',
+  'IUOE': '/glossary/#I',
+  'dozer': '/glossary/#D',
+  'excavator': '/glossary/#E',
+  'haul road': '/glossary/#H',
+  'compaction': '/glossary/#C',
+  'grader': '/glossary/#G',
+  'apprenticeship': '/glossary/#A',
+  'H2S alive': '/glossary/#H',
+  'red seal': '/glossary/#R',
+  'class 1': '/glossary/#C',
+  'dispatch': '/glossary/#D',
+  'loader': '/glossary/#L',
+  'ADT': '/glossary/#A'
+};
+document.querySelectorAll('p, li, td, h2, h3').forEach(el => {
+  if (el.querySelectorAll('a').length === 0) {
+    let text = el.innerHTML;
+    Object.keys(glossaryTerms).forEach(term => {
+      const regex = new RegExp(`\\b${term}\\b`, 'gi');
+      text = text.replace(regex, `<a href="${glossaryTerms[term]}" style="color:#ff8c00;text-decoration:underline;cursor:pointer;">$&</a>`);
+    });
+    el.innerHTML = text;
+  }
+});
+</script>
+
+<!-- Disqus Comments -->
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = document.title;
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://dirtschool.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+<!-- GA4 Conversion Tracking -->
+<script>
+document.querySelectorAll('a[href*="gumroad.com"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        gtag('event', 'gumroad_click', {
+            'event_category': 'engagement',
+            'event_label': this.href,
+            'page_title': document.title,
+            'page_path': window.location.pathname
+        });
+    });
+});
+
+window.shareToX = window.shareToX || function() {
+    gtag('event', 'share', {'event_category': 'viral', 'event_label': 'twitter', 'page_path': window.location.pathname});
+};
+
+window.shareToReddit = window.shareToReddit || function() {
+    gtag('event', 'share', {'event_category': 'viral', 'event_label': 'reddit', 'page_path': window.location.pathname});
+};
+</script>
+
+<!-- EMAIL SIGNUP FORM (INJECTED) -->
+<section style="background:#111;border-top:1px solid #333;border-bottom:1px solid #333;padding:2.5rem 2rem;margin-top:4rem;">
+  <div style="max-width:600px;margin:0 auto;text-align:center;">
+    <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:.75rem;color:#f0ede8;">Get the free IUOE cram sheet</h3>
+    <p style="color:#888;margin-bottom:1.5rem;font-size:.95rem;">Every formula and exam trap on one page. Instant download, no spam.</p>
+    <form class="email-form" onsubmit="handleEmailSubmit(event)" style="display:flex;gap:.75rem;max-width:500px;margin:0 auto;">
+      <input type="email" placeholder="your@email.com" required style="flex:1;padding:.75rem;background:#0d0d0d;border:1px solid #333;border-radius:6px;color:#f0ede8;font-size:.95rem;">
+      <button type="submit" style="background:#e8a020;color:#0d0d0d;font-weight:800;padding:.75rem 1.5rem;border-radius:6px;border:none;cursor:pointer;font-size:.95rem;">Get It Free</button>
+    </form>
+  </div>
+</section>
+
+<script>
+function handleEmailSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const emailInput = form.querySelector('input[type="email"]');
+  const btn = form.querySelector('button');
+  const originalText = btn.textContent;
+  btn.textContent = '✓ Subscribed!';
+  btn.style.background = '#2a7a2a';
+  emailInput.disabled = true;
+  btn.disabled = true;
+  fetch('/signup', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: emailInput.value, source: window.location.pathname, ts: new Date().toISOString()})
+  }).catch(e => console.log('Signup recorded.'));
+}
+</script>
+
+<!-- RELATED RESOURCES CTA (INJECTED) -->
+<section style="background:#111;border:1px solid #333;border-radius:12px;padding:2rem;margin-top:3rem;">
+<div style="max-width:600px;">
+<p style="font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e8a020;margin-bottom:1rem;">Related Resources</p>
+<h3 style="font-size:1.2rem;font-weight:800;margin-bottom:1.5rem;color:#f0ede8;">Continue Learning</h3>
+<div style="display:grid;gap:1rem;">
+<a href="https://dirtschool.gumroad.com/l/operator-toolkit" style="display:block;padding:1rem;background:#0d0d0d;border:1px solid #222;border-radius:8px;color:#e8a020;text-decoration:none;transition:border-color 0.2s;font-weight:700;">
+Operator Toolkit →
+</a>
+<a href="https://dirtschool.gumroad.com/l/iuoe-study-guide" style="display:block;padding:1rem;background:#0d0d0d;border:1px solid #222;border-radius:8px;color:#e8a020;text-decoration:none;transition:border-color 0.2s;font-weight:700;">
+IUOE Aptitude Test →
+</a>
+<a href="https://dirtschool.gumroad.com/l/redseal-heo-guide" style="display:block;padding:1rem;background:#0d0d0d;border:1px solid #222;border-radius:8px;color:#e8a020;text-decoration:none;transition:border-color 0.2s;font-weight:700;">
+Red Seal HEO →
+</a>
+</div>
+</div>
+</section>
+
+</body>
+</html>

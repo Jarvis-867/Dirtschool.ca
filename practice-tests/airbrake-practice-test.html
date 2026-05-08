@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Class 1/3 Air Brake Practice Test — 30 Questions | Dirt School</title>
+<meta name="description" content="Free Class 1 / Class 3 air brake practice test. Static loss, pushrod stroke, parking brake, applied test. BC + Alberta. Instant scoring.">
+<link rel="canonical" href="https://dirtschool.ca/practice-tests/airbrake-practice-test.html">
+<link rel="stylesheet" href="practice-test.css">
+</head>
+<body>
+<div class="container">
+  <a class="back-link" href="/">← Back to Dirt School</a>
+  <div class="header">
+    <h1>Free <span class="accent">Air Brake</span> Practice Test</h1>
+    <p>30 questions • Class 1 / Class 3 prep • BC + Alberta</p>
+  </div>
+  <div id="start-screen" class="start-screen"></div>
+  <div id="test-screen" class="test-screen"></div>
+  <div id="results-screen" class="results-screen"></div>
+  <footer>
+    Built by operators, for operators. © Dirt School · <a href="https://dirtschool.ca">dirtschool.ca</a>
+  </footer>
+</div>
+
+<script>
+const TEST_CONFIG = {
+  title: "Air Brake Endorsement — Free Practice",
+  description: "Class 1/3 air brake written test prep. Same content tested in BC and Alberta.",
+  guideName: "Class 1/3 Road Test",
+  guideUrl: "https://dirtschool.gumroad.com/l/class-pretrip",
+  timeLimitMin: 30,
+  passMark: 80,
+  shuffle: false,
+  instructions: "30 multiple choice. Air brake endorsement requires 80% pass mark in most provinces. Read the question carefully — air brake questions are precise about numbers.",
+  questions: [
+    { category: "System Components", q: "What component compresses air for the brake system?", options: ["Air dryer", "Compressor", "Governor", "Reservoir"], answer: 1, explanation: "Compressor builds air pressure. Governor controls when it cuts in/out. Dryer removes moisture." },
+    { category: "System Components", q: "The governor's job is to:", options: ["Filter air", "Control compressor cut-in and cut-out pressure", "Apply the brakes", "Release the parking brake"], answer: 1, explanation: "Governor cuts compressor out around 125 psi and back in around 100 psi." },
+    { category: "System Components", q: "What removes moisture and contaminants from compressed air?", options: ["Compressor", "Air dryer", "Governor", "Slack adjuster"], answer: 1, explanation: "Air dryer removes water before it reaches reservoirs and can freeze." },
+    { category: "System Components", q: "Spring brakes apply automatically when air pressure drops below:", options: ["20-45 psi", "60 psi", "90 psi", "120 psi"], answer: 0, explanation: "Spring brakes (parking) apply 20-45 psi as air drops. They're held off by air pressure." },
+    { category: "System Components", q: "What is the purpose of the one-way check valve between the wet tank and dry tanks?", options: ["Drain water", "Prevent backflow if a tank ruptures", "Boost pressure", "Reduce noise"], answer: 1, explanation: "One-way valves protect remaining tanks if one fails." },
+
+    { category: "Pressure & Tests", q: "Normal operating pressure range for air brakes is:", options: ["50-80 psi", "80-100 psi", "100-135 psi", "150-200 psi"], answer: 2, explanation: "Typical range: cut-in ~100, cut-out ~125-135 psi." },
+    { category: "Pressure & Tests", q: "When does the low air warning device activate?", options: ["At 80 psi", "Below 60 psi (or 55 psi in some provinces)", "At 100 psi", "Only when brakes fail"], answer: 1, explanation: "Warning at or below 60 psi (55 in some). Light, buzzer, or both." },
+    { category: "Pressure & Tests", q: "Maximum allowable air pressure loss with the engine off, foot off the brake (static):", options: ["1 psi/min", "2 psi/min", "3 psi/min single, 4 psi/min combo", "10 psi/min"], answer: 2, explanation: "Static loss: 3 psi/min single unit, 4 psi/min combination vehicle." },
+    { category: "Pressure & Tests", q: "Maximum allowable air pressure loss with the brake fully applied (applied test):", options: ["3 psi/min single, 4 psi/min combo", "4 psi/min single, 6 psi/min combo", "10 psi/min", "20 psi/min"], answer: 1, explanation: "Applied loss: 4 psi/min single, 6 psi/min combo. Higher than static because of valve seats opening under pressure." },
+    { category: "Pressure & Tests", q: "Compressor build-up time from 85 psi to 100 psi must be:", options: ["Under 30 seconds", "Under 2 minutes", "Under 5 minutes", "Doesn't matter"], answer: 1, explanation: "Build from 85 to 100 psi must take under 2 minutes for the system to be roadworthy." },
+    { category: "Pressure & Tests", q: "If your air pressure starts dropping while driving, you should:", options: ["Pull over immediately, safely", "Speed up to reach destination", "Apply brakes hard to test", "Ignore until warning sounds"], answer: 0, explanation: "Pull over safely BEFORE warning sounds. Once at warning, stop immediately — spring brakes will apply." },
+
+    { category: "Pre-Trip Inspection", q: "Pushrod travel (free stroke) on a Type 30 brake chamber should not exceed:", options: ["1 inch", "1.5 inches (varies by chamber type — refer to manual)", "2.5 inches", "4 inches"], answer: 1, explanation: "Roughly 1.5 inches max free stroke for Type 30. Check manual for specific chamber." },
+    { category: "Pre-Trip Inspection", q: "What does an automatic slack adjuster do?", options: ["Adjust seat", "Maintain proper pushrod stroke as brake linings wear", "Fill air tanks", "Engage parking brake"], answer: 1, explanation: "Slack adjusters compensate for lining wear. Manual adjusters need regular service; automatics self-adjust." },
+    { category: "Pre-Trip Inspection", q: "When checking brake linings, minimum thickness is approximately:", options: ["1/16 inch (1.5 mm)", "1/4 inch (6 mm)", "1/2 inch (13 mm)", "1 inch (25 mm)"], answer: 1, explanation: "Most regs: 1/4 inch (6 mm) at the thinnest point. Cracked or contaminated linings = defect." },
+    { category: "Pre-Trip Inspection", q: "Air tank reservoirs must be drained:", options: ["Once a month", "Daily, to remove water and oil", "Once a year", "Only when contaminated"], answer: 1, explanation: "Daily drain. Water freezes and seizes valves." },
+    { category: "Pre-Trip Inspection", q: "When checking the parking brake, you should:", options: ["Just look at the dash light", "Apply parking brake, gently try to move forward in low gear", "Drive on a hill", "Skip — not required"], answer: 1, explanation: "Parking brake applied test: try to move slowly. Truck should not move." },
+    { category: "Pre-Trip Inspection", q: "Air brake leak: hissing from the front of the truck while parked. Likely source?", options: ["Trailer", "Front service line, governor, or compressor", "Tires", "Exhaust"], answer: 1, explanation: "Front-end hissing = front service line, governor unloader, or compressor head leak." },
+
+    { category: "Operating", q: "Brake fade is caused by:", options: ["Cold brakes", "Excessive heat from prolonged or repeated application", "Wet brakes", "Empty air tanks"], answer: 1, explanation: "Heat reduces friction. Use engine braking on long downhills." },
+    { category: "Operating", q: "On a long downhill, the safest braking technique is:", options: ["Continuous foot brake pressure", "Snub braking — firm application then release, with engine braking", "Riding the brakes lightly", "Coasting in neutral"], answer: 1, explanation: "Snub braking: drop 5 mph below safe speed with firm app, release, let speed creep up, repeat. Coasting in neutral is illegal." },
+    { category: "Operating", q: "What is brake lag?", options: ["When the brakes drag", "Delay between pressing the pedal and brakes applying (about 0.5 sec)", "Worn-out pads", "Stuck pushrod"], answer: 1, explanation: "Air brake lag is roughly 0.4-0.5 seconds vs hydraulic which is near-instant. Plan your stops." },
+    { category: "Operating", q: "When parking on a steep grade, you should:", options: ["Apply parking brake only", "Apply parking brake AND chock the wheels", "Leave in gear with no brake", "Park sideways"], answer: 1, explanation: "Steep grade = parking brake + chocks. Belt and suspenders." },
+    { category: "Operating", q: "If your brakes get wet (deep puddle), you should:", options: ["Drive at normal speed", "Apply light pressure to dry them out", "Ignore it", "Park immediately"], answer: 1, explanation: "Light brake application generates heat to dry the friction surfaces." },
+
+    { category: "Combination Vehicle", q: "Trailer service brake test: with the trailer hand valve fully applied, you should:", options: ["See trailer brakes apply, no air loss beyond limit", "Hear nothing", "See no change", "Trailer should creep forward"], answer: 0, explanation: "Apply trailer hand valve, walk back, confirm trailer brakes engaged. Then check applied air loss." },
+    { category: "Combination Vehicle", q: "What does the tractor protection valve do?", options: ["Heats the cab", "Closes off air to a disconnected trailer to preserve tractor air", "Locks the doors", "Shuts off the engine"], answer: 1, explanation: "Tractor protection valve isolates the tractor system if the trailer disconnects, preserving brake function." },
+    { category: "Combination Vehicle", q: "The red emergency line on a trailer:", options: ["Carries service air (varies)", "Holds spring brakes off and supplies air to trailer reservoirs", "Is for the parking brake only", "Carries electrical signal"], answer: 1, explanation: "Red = emergency/supply. Loss of pressure = spring brakes apply. Blue = service brake control." },
+    { category: "Combination Vehicle", q: "Couple-up procedure: which brake do you set first on the tractor before backing under the trailer?", options: ["Service brake", "Tractor parking brake (yellow knob)", "Trailer parking brake (red knob)", "Both"], answer: 2, explanation: "Set trailer brakes first (red), back under, then jaw test. Tractor brakes used as needed." },
+
+    { category: "Defects", q: "Discovered: brake pushrod stroke beyond legal limit during pre-trip. Action?", options: ["Adjust manually and continue", "Tag out — major defect, needs repair before driving", "Continue and report at end of shift", "Drive carefully"], answer: 1, explanation: "Out-of-adjustment brake = major defect = vehicle out of service." },
+    { category: "Defects", q: "An air leak you can hear at idle. Action?", options: ["Drive — leaks always exist", "Locate, classify (minor vs major), fix or tag out", "Add more air pressure", "Cover with tape"], answer: 1, explanation: "Audible leak needs investigation. Minor (e.g., dryer purge) = OK. Anywhere else = repair." },
+    { category: "Defects", q: "What is the difference between a 'minor' and 'major' defect?", options: ["Cost of repair", "Major = unsafe to operate, must be repaired before driving", "Minor takes longer", "Same thing"], answer: 1, explanation: "Major defect = vehicle out of service immediately. Minor = repair within reasonable time but not unsafe to operate." },
+    { category: "Defects", q: "A driver who operates a vehicle with a major defect risks:", options: ["A small fine", "Out-of-service order, fines, points, possible criminal charges if injury", "Nothing", "Verbal warning only"], answer: 1, explanation: "Operating with major defect = serious legal consequences. Don't do it." }
+  ]
+};
+</script>
+<script src="practice-test.js"></script>
+</body>
+</html>

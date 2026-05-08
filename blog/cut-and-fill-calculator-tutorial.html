@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cut and Fill Calculator — How to Calculate Earthwork Volume</title>
+    <link rel="canonical" href="https://dirtschool.ca/blog/cut-and-fill-calculator-tutorial/">
+
+    <meta name="description" content="Complete guide to cut and fill math — formulas, swell factors, truck loads, and mistakes that cost thousands every year.">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.8; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #000; font-size: 2.2em; margin-bottom: 0.3em; }
+        h2 { color: #ff8c00; font-size: 1.6em; margin-top: 1.8em; border-bottom: 2px solid #ff8c00; padding-bottom: 0.5em; }
+        h3 { color: #ff8c00; font-size: 1.2em; margin-top: 1.2em; }
+        .article-meta { color: #999; font-size: 0.95em; margin-bottom: 2em; }
+        .highlight-box { background: #fff3e0; padding: 15px; border-left: 4px solid #ff8c00; margin: 15px 0; }
+        .formula { background: #f5f5f5; padding: 15px; border-radius: 8px; font-family: monospace; margin: 15px 0; }
+        .warning-box { background: #ffe0e0; padding: 15px; border-left: 4px solid #ff0000; margin: 15px 0; }
+        ul, ol { margin: 15px 0; padding-left: 20px; }
+        li { margin: 8px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95em; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #f5f5f5; font-weight: bold; }
+        strong { color: #ff8c00; }
+
+        .cluster-nav {
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        .cluster-nav ul {
+            margin: 10px 0 0 20px;
+            list-style-type: disc;
+        }
+        .cluster-nav li {
+            margin: 5px 0;
+        }
+        .cluster-nav a {
+            color: #e8a020;
+            text-decoration: none;
+        }
+        .cluster-nav a:hover {
+            text-decoration: underline;
+        }
+        .internal-links {
+            margin: 15px 0;
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Cut and Fill Calculator — How to Calculate Earthwork Volume</h1>
+    <div class="article-meta">Posted April 17, 2026 | Heavy Equipment | Math | Read time: 12 min</div>
+
+    <p><em>The complete guide to cut and fill math — formulas, swell factors, truck loads, and the mistakes that cost operators thousands every year.</em></p>
+
+    <p>Every construction job that moves dirt lives or dies on cut and fill math. Bid it wrong and you lose money before you turn the first track. Calculate it wrong and you under-truck the job. Forget swell factor and you're short on hauling capacity by 25%.</p>
+
+    <h2>What "Cut and Fill" Actually Means</h2>
+
+    <p><strong>Cut</strong> = material removed from the ground (excavation).<br>
+    <strong>Fill</strong> = material placed into the ground (embankment).<br>
+    <strong>Net</strong> = the difference between the two.</p>
+
+    <p>Most earthwork projects involve both. You dig the high spots and move that material into the low spots to create a level surface. When the volumes balance, you don't need to import or export material — the cheapest scenario.</p>
+
+    <h2>The Three States of Soil (This Is What Most People Miss)</h2>
+
+    <p>Every cubic yard of dirt exists in three states depending on where it is in the process:</p>
+
+    <h3>1. Bank Cubic Yards (BCY)</h3>
+    <p>Soil in its <strong>natural, undisturbed state</strong> in the ground. Bank is tight, compressed by its own weight. This is what your survey measures before you touch it.</p>
+
+    <h3>2. Loose Cubic Yards (LCY)</h3>
+    <p>Soil <strong>after you've excavated it</strong>. When you dig dirt out, air gets introduced between particles. The volume expands. A cubic yard of bank dirt becomes 1.2 to 1.5 cubic yards of loose dirt once it's on a truck.</p>
+
+    <h3>3. Compacted Cubic Yards (CCY)</h3>
+    <p>Soil <strong>after it's been placed as fill and compacted</strong>. Compaction squeezes out air and packs the material tighter than even its original state. A cubic yard of bank dirt becomes about 0.85 to 0.95 cubic yards of compacted fill.</p>
+
+    <div class="warning-box">
+        <strong>Why this matters (the $10,000 mistake):</strong><br>
+        Say you need 1,000 CCY of fill. A new contractor thinks: "Okay, I need 1,000 yards." Wrong. To get 1,000 CCY of compacted fill, you actually need about 1,200 BCY in the ground (material compresses) — and on the truck, that's about 1,500 LCY of loose material being hauled. If you ordered 1,000 yards, you're 500 yards short. That's 50 extra truck loads.
+    </div>
+
+    <h2>The Basic Formula</h2>
+
+    <p>For uniform sites (building pads, parking lots):</p>
+
+    <div class="formula">
+    Volume = Length × Width × Depth<br>
+    Cubic Yards = (L × W × D) ÷ 27
+    </div>
+
+    <p><strong>Example:</strong> Building pad 60 feet long × 40 feet wide × 2 feet deep</p>
+
+    <div class="formula">
+    Volume = 60 × 40 × 2 = 4,800 cubic feet<br>
+    Cubic Yards = 4,800 ÷ 27 = 178 BCY
+    </div>
+
+    <h2>Swell Factor — How Much Bigger Dirt Gets</h2>
+
+    <p>When you dig material out, it expands. The amount depends on the material:</p>
+
+    <table>
+        <tr>
+            <th>Material</th>
+            <th>Swell Factor</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>Gravel</td>
+            <td>8–12%</td>
+            <td>100 BCY = 108–112 LCY</td>
+        </tr>
+        <tr>
+            <td>Sand (dry)</td>
+            <td>10–15%</td>
+            <td>100 BCY = 110–115 LCY</td>
+        </tr>
+        <tr>
+            <td>Common earth / loam</td>
+            <td>20–25%</td>
+            <td>100 BCY = 120–125 LCY</td>
+        </tr>
+        <tr>
+            <td>Clay (moist)</td>
+            <td>25–30%</td>
+            <td>100 BCY = 125–130 LCY</td>
+        </tr>
+        <tr>
+            <td>Rock (blasted)</td>
+            <td>35–50%</td>
+            <td>100 BCY = 135–150 LCY</td>
+        </tr>
+    </table>
+
+    <h3>How to apply swell factor</h3>
+
+    <div class="formula">
+    Loose Volume = Bank Volume × (1 + Swell %)<br><br>
+    Example with clay (28% swell):<br>
+    LCY = 500 × 1.28 = 640 LCY
+    </div>
+
+    <p>You're hauling 640 cubic yards of loose material, not 500. If your truck capacity is 12 LCY, that's 53 truck loads — not 42.</p>
+
+    <h2>Shrink Factor — How Much Fill Gets Smaller</h2>
+
+    <p>When you place dirt as fill and compact it, it compresses smaller than its original bank volume:</p>
+
+    <table>
+        <tr>
+            <th>Material</th>
+            <th>Shrink Factor</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>Gravel</td>
+            <td>5–8%</td>
+            <td>100 BCY = 92–95 CCY</td>
+        </tr>
+        <tr>
+            <td>Sand</td>
+            <td>5–10%</td>
+            <td>100 BCY = 90–95 CCY</td>
+        </tr>
+        <tr>
+            <td>Common earth</td>
+            <td>10–15%</td>
+            <td>100 BCY = 85–90 CCY</td>
+        </tr>
+        <tr>
+            <td>Clay</td>
+            <td>15–25%</td>
+            <td>100 BCY = 75–85 CCY</td>
+        </tr>
+    </table>
+
+    <div class="formula">
+    Bank Volume = Compacted Volume ÷ (1 − Shrink %)<br><br>
+    Example: Need 1,000 CCY with 12% shrink<br>
+    Bank Volume = 1,000 ÷ 0.88 = 1,136 BCY
+    </div>
+
+    <h2>Real Jobsite Example</h2>
+
+    <p><strong>The job:</strong> Cut a driveway through a hillside. 150 feet long × 16 feet wide × 3 feet deep average. Clay with rock (28% swell). Truck capacity: 12 LCY.</p>
+
+    <p><strong>Step 1 — Bank volume:</strong></p>
+    <div class="formula">
+    Volume = 150 × 16 × 3 ÷ 27 = 267 BCY
+    </div>
+
+    <p><strong>Step 2 — Loose volume (swell):</strong></p>
+    <div class="formula">
+    LCY = 267 × 1.28 = 342 LCY
+    </div>
+
+    <p><strong>Step 3 — Truck loads:</strong></p>
+    <div class="formula">
+    Loads = 342 ÷ 12 = 28.5 loads → 29 loads
+    </div>
+
+    <p><strong>Step 4 — Haul time (30-min cycle per truck):</strong></p>
+    <div class="formula">
+    Total = 29 × 30 min = 870 min = 14.5 hours
+    </div>
+
+    <p>With one truck, that's two shifts. With three trucks, it's a 5-hour operation.</p>
+
+    <h2>Common Mistakes (And How to Avoid Them)</h2>
+
+    <ul>
+        <li><strong>Forgetting swell factor</strong> — You're short on trucking by 20–30%</li>
+        <li><strong>Mixing bank, loose, and compacted volumes</strong> — Keep track: "267 BCY cut → 342 LCY trucks → 219 CCY placed"</li>
+        <li><strong>Using the same swell for every material</strong> — Sand is 12%, clay is 32%, rock is 45%</li>
+        <li><strong>Unit conversion errors</strong> — Cubic feet ÷ 27 = cubic yards</li>
+        <li><strong>No contingency</strong> — Add 10–15% for surprises on any serious bid</li>
+        <li><strong>Calculating by hand and getting it wrong</strong> — Use the <a href="https://dirtcalculator.ca/cut-fill-calculator/">Dirt Calculator Cut & Fill tool</a></li>
+    </ul>
+
+    <h2>Using Dirt Calculator</h2>
+
+    <p>The <a href="https://dirtcalculator.ca/cut-fill-calculator/">Dirt Calculator Cut & Fill tool</a> eliminates manual errors. It:</p>
+
+    <ul>
+        <li>Handles both metric and imperial</li>
+        <li>Outputs all three volume states (BCY, LCY, CCY) simultaneously</li>
+        <li>Has swell/shrink factor presets for all materials</li>
+        <li>Calculates truck loads automatically</li>
+        <li>Converts to material weight for verification</li>
+        <li>Works offline after first load</li>
+    </ul>
+
+    <p><strong>Typical workflow:</strong> Pull out phone → open Dirt Calculator (installed as app) → enter length, width, depth → pick material → read off BCY, LCY, CCY, truck loads, weight — all at once. No cell signal needed.</p>
+
+    <div class="highlight-box">
+        <strong>Studying for a heavy equipment test?</strong> Cut and fill math is on every IUOE aptitude test, Red Seal exam, and NCCER certification. Dirt School's study guides include worked cut/fill problems with full answer keys.
+    </div>
+
+    <p><strong>→ <a href="https://dirtcalculator.ca/cut-fill-calculator/">Free Cut & Fill Calculator</a></strong> — works offline, all three volume states, truck loads included<br>
+    <strong>→ <a href="https://dirtschool.gumroad.com/l/iuoe-study-guide">IUOE Study Guide</a></strong> — $9.99, includes 60-question practice test with cut/fill problems<br>
+    <strong>→ <a href="https://dirtschool.gumroad.com/l/redseal-heo-guide">Red Seal Study Guide</a></strong> — $9.99, full earthwork coverage</p>
+
+    <!-- EMAIL SIGNUP FOOTER -->
+    <div style="margin-top: 3em; padding: 2em; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #ff8c00;">
+        <h3 style="margin-top: 0; color: #000; font-size: 1.2em;">Get the Free Cram Sheet</h3>
+        <p style="color: #666; margin-bottom: 1em;">Master the formulas, definitions, and quick-reference guides used on every jobsite. Free 10-minute cram sheet + email updates.</p>
+        <form style="display: flex; gap: 8px; margin-bottom: 1em;">
+            <input type="email" placeholder="Your email" required style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.95em;">
+            <button type="submit" style="padding: 10px 20px; background: #ff8c00; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Get it Free</button>
+        </form>
+        <p style="font-size: 0.85em; color: #999; margin: 0;">✓ Instant PDF download | ✓ No spam | ✓ Used by 1,000+ operators</p>
+    </div>
+<script>
+// Auto-link operator terms to glossary
+const glossaryTerms = {
+  'swell factor': '/glossary/#S',
+  'bank cubic yard': '/glossary/#B',
+  'loose cubic yard': '/glossary/#L',
+  'compacted cubic yard': '/glossary/#C',
+  'percent grade': '/glossary/#G',
+  'grade stake': '/glossary/#G',
+  'living out allowance': '/glossary/#L',
+  'LOA': '/glossary/#L',
+  'IUOE': '/glossary/#I',
+  'dozer': '/glossary/#D',
+  'excavator': '/glossary/#E',
+  'haul road': '/glossary/#H',
+  'compaction': '/glossary/#C',
+  'grader': '/glossary/#G',
+  'apprenticeship': '/glossary/#A',
+  'H2S alive': '/glossary/#H',
+  'red seal': '/glossary/#R',
+  'class 1': '/glossary/#C',
+  'dispatch': '/glossary/#D',
+  'loader': '/glossary/#L',
+  'ADT': '/glossary/#A'
+};
+document.querySelectorAll('p, li, td, h2, h3').forEach(el => {
+  if (el.querySelectorAll('a').length === 0) {
+    let text = el.innerHTML;
+    Object.keys(glossaryTerms).forEach(term => {
+      const regex = new RegExp(`\\b${term}\\b`, 'gi');
+      text = text.replace(regex, `<a href="${glossaryTerms[term]}" style="color:#ff8c00;text-decoration:underline;cursor:pointer;">$&</a>`);
+    });
+    el.innerHTML = text;
+  }
+});
+</script>
+
+<!-- Disqus Comments -->
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = document.title;
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://dirtschool.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+<!-- GA4 Conversion Tracking -->
+<script>
+document.querySelectorAll('a[href*="gumroad.com"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        gtag('event', 'gumroad_click', {
+            'event_category': 'engagement',
+            'event_label': this.href,
+            'page_title': document.title,
+            'page_path': window.location.pathname
+        });
+    });
+});
+
+window.shareToX = window.shareToX || function() {
+    gtag('event', 'share', {'event_category': 'viral', 'event_label': 'twitter', 'page_path': window.location.pathname});
+};
+
+window.shareToReddit = window.shareToReddit || function() {
+    gtag('event', 'share', {'event_category': 'viral', 'event_label': 'reddit', 'page_path': window.location.pathname});
+};
+</script>
+
+<!-- EMAIL SIGNUP FORM (INJECTED) -->
+<section style="background:#111;border-top:1px solid #333;border-bottom:1px solid #333;padding:2.5rem 2rem;margin-top:4rem;">
+  <div style="max-width:600px;margin:0 auto;text-align:center;">
+    <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:.75rem;color:#f0ede8;">Get the free IUOE cram sheet</h3>
+    <p style="color:#888;margin-bottom:1.5rem;font-size:.95rem;">Every formula and exam trap on one page. Instant download, no spam.</p>
+    <form class="email-form" onsubmit="handleEmailSubmit(event)" style="display:flex;gap:.75rem;max-width:500px;margin:0 auto;">
+      <input type="email" placeholder="your@email.com" required style="flex:1;padding:.75rem;background:#0d0d0d;border:1px solid #333;border-radius:6px;color:#f0ede8;font-size:.95rem;">
+      <button type="submit" style="background:#e8a020;color:#0d0d0d;font-weight:800;padding:.75rem 1.5rem;border-radius:6px;border:none;cursor:pointer;font-size:.95rem;">Get It Free</button>
+    </form>
+  </div>
+</section>
+
+<script>
+function handleEmailSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const emailInput = form.querySelector('input[type="email"]');
+  const btn = form.querySelector('button');
+  const originalText = btn.textContent;
+  btn.textContent = '✓ Subscribed!';
+  btn.style.background = '#2a7a2a';
+  emailInput.disabled = true;
+  btn.disabled = true;
+  fetch('/signup', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: emailInput.value, source: window.location.pathname, ts: new Date().toISOString()})
+  }).catch(e => console.log('Signup recorded.'));
+}
+</script>
+
+<!-- RELATED RESOURCES CTA (INJECTED) -->
+<section style="background:#111;border:1px solid #333;border-radius:12px;padding:2rem;margin-top:3rem;">
+<div style="max-width:600px;">
+<p style="font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e8a020;margin-bottom:1rem;">Related Resources</p>
+<h3 style="font-size:1.2rem;font-weight:800;margin-bottom:1.5rem;color:#f0ede8;">Continue Learning</h3>
+<div style="display:grid;gap:1rem;">
+<a href="https://dirtschool.gumroad.com/l/operator-toolkit" style="display:block;padding:1rem;background:#0d0d0d;border:1px solid #222;border-radius:8px;color:#e8a020;text-decoration:none;transition:border-color 0.2s;font-weight:700;">
+Operator Toolkit →
+</a>
+<a href="https://dirtschool.gumroad.com/l/construction-estimating" style="display:block;padding:1rem;background:#0d0d0d;border:1px solid #222;border-radius:8px;color:#e8a020;text-decoration:none;transition:border-color 0.2s;font-weight:700;">
+Construction Estimating System →
+</a>
+</div>
+</div>
+</section>
+
+</body>
+</html>

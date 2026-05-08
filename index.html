@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-69K981KFVB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-69K981KFVB');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dirt School — Pass Your Heavy Equipment Operator Test</title>
+  <meta name="description" content="Study guides for IUOE, Red Seal, and NCCER heavy equipment operator exams. Built by real operators. No textbook BS.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0d0d0d; color: #f0ede8; line-height: 1.6; }
+
+    /* NAV */
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; border-bottom: 1px solid #1a1a1a; position: sticky; top: 0; background: #0d0d0d; z-index: 100; }
+    .logo { font-size: 1.4rem; font-weight: 900; color: #f0ede8; text-decoration: none; letter-spacing: -0.5px; }
+    .logo span { color: #e8a020; }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a { color: #aaa; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: #f0ede8; }
+    .nav-cta { background: #e8a020 !important; color: #0d0d0d !important; font-weight: 700 !important; padding: 0.5rem 1.2rem; border-radius: 6px; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { color: #aaa; text-decoration: none; font-size: 0.9rem; cursor: pointer; user-select: none; }
+    .nav-dropdown.open > a { color: #f0ede8; }
+    .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 0; background: #111; border: 1px solid #333; border-radius: 8px; padding: 0.5rem 0; min-width: 220px; z-index: 200; }
+    .nav-dropdown.open .dropdown-menu { display: block; }
+    .dropdown-menu a { display: block; padding: 0.5rem 1.1rem; color: #ccc; text-decoration: none; font-size: 0.85rem; transition: color 0.15s; }
+    .dropdown-menu a:hover { color: #e8a020; }
+    .dropdown-menu .dm-label { padding: 0.5rem 1.1rem 0.2rem; color: #e8a020; font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+    .dropdown-menu hr { border: none; border-top: 1px solid #222; margin: 0.3rem 0; }
+
+    /* HERO */
+    .hero { max-width: 860px; margin: 0 auto; padding: 5rem 2rem 4rem; text-align: center; }
+    .badge { display: inline-block; background: #1a1a1a; border: 1px solid #333; color: #e8a020; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 1.5rem; }
+    h1 { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 900; line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 1.2rem; }
+    h1 em { font-style: normal; color: #e8a020; }
+    .hero-sub { font-size: 1.2rem; color: #888; max-width: 560px; margin: 0 auto 2.5rem; }
+    .hero-cta { margin-bottom: 0.75rem; }
+    .btn { display: inline-block; background: #e8a020; color: #0d0d0d; font-weight: 800; padding: 0.9rem 2rem; border-radius: 8px; text-decoration: none; font-size: 1.05rem; transition: background 0.2s, transform 0.1s; border: none; cursor: pointer; }
+    .btn:hover { background: #f5b030; transform: translateY(-1px); }
+    .btn-secondary { background: #1a1a1a; color: #f0ede8; border: 1px solid #333; margin-left: 0.75rem; }
+    .btn-secondary:hover { background: #222; }
+    .hero-note { font-size: 0.8rem; color: #555; }
+
+    /* PROBLEM */
+    .problem { background: #080808; padding: 4rem 2rem; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; }
+    .problem-inner { max-width: 860px; margin: 0 auto; }
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #e8a020; margin-bottom: 1rem; }
+    .problem h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; margin-bottom: 2rem; letter-spacing: -0.5px; }
+    .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .problem-card { background: #111; border: 1px solid #1e1e1e; border-radius: 10px; padding: 1.5rem; }
+    .problem-card .icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .problem-card p { color: #888; font-size: 0.95rem; }
+    .problem-card strong { display: block; color: #f0ede8; margin-bottom: 0.4rem; font-size: 1rem; }
+
+    /* SOLUTION */
+    .solution { max-width: 860px; margin: 0 auto; padding: 4rem 2rem; }
+    .solution h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; margin-bottom: 0.75rem; letter-spacing: -0.5px; }
+    .solution p { color: #888; font-size: 1.05rem; margin-bottom: 2rem; max-width: 600px; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .feature { display: flex; gap: 0.75rem; align-items: flex-start; }
+    .feature .check { color: #e8a020; font-size: 1.1rem; margin-top: 0.1rem; flex-shrink: 0; }
+    .feature p { color: #aaa; font-size: 0.95rem; margin: 0; }
+    .feature strong { display: block; color: #f0ede8; margin-bottom: 0.2rem; }
+
+    /* PRODUCTS */
+    .products { background: #080808; padding: 4rem 2rem; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; }
+    .products-inner { max-width: 960px; margin: 0 auto; }
+    .products h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+    .products-sub { color: #666; margin-bottom: 2.5rem; font-size: 1rem; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+    .product-card { background: #111; border: 1px solid #222; border-radius: 14px; padding: 2rem; display: flex; flex-direction: column; transition: border-color 0.2s; }
+    .product-card:hover { border-color: #e8a020; }
+    .product-card .tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #e8a020; margin-bottom: 1rem; }
+    .product-card h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .product-card p { color: #666; font-size: 0.9rem; margin-bottom: 1.25rem; flex: 1; }
+    .product-card ul { color: #888; font-size: 0.85rem; margin: 0 0 1.5rem 1.2rem; }
+    .product-card ul li { margin-bottom: 0.3rem; }
+    .product-card .price { font-size: 1.4rem; font-weight: 900; color: #f0ede8; margin-bottom: 1rem; }
+    .product-card .price span { font-size: 0.85rem; color: #555; font-weight: 400; }
+    .flagship { border-color: #e8a020; }
+    .flagship-badge { background: #e8a020; color: #0d0d0d; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 100px; display: inline-block; margin-bottom: 1rem; }
+
+    /* TRUST */
+    .trust { max-width: 860px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+    .trust h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; margin-bottom: 1rem; }
+    .trust p { color: #666; max-width: 580px; margin: 0 auto 2.5rem; font-size: 1rem; }
+    .trust-points { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 3rem; }
+    .trust-point { text-align: center; }
+    .trust-point .num { font-size: 2rem; font-weight: 900; color: #e8a020; }
+    .trust-point .label { font-size: 0.8rem; color: #555; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* BLOG */
+    .blog { background: #080808; padding: 4rem 2rem; border-top: 1px solid #1a1a1a; }
+    .blog-inner { max-width: 860px; margin: 0 auto; }
+    .blog h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; margin-bottom: 0.5rem; }
+    .blog-sub { color: #666; margin-bottom: 2rem; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+    .blog-card { background: #111; border: 1px solid #1e1e1e; border-radius: 10px; padding: 1.5rem; text-decoration: none; display: block; transition: border-color 0.2s; }
+    .blog-card:hover { border-color: #e8a020; }
+    .blog-card .blog-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .blog-card h3 { font-size: 0.95rem; font-weight: 700; color: #f0ede8; margin-bottom: 0.5rem; }
+    .blog-card p { font-size: 0.85rem; color: #666; }
+    .blog-card .read { font-size: 0.8rem; color: #e8a020; margin-top: 0.75rem; font-weight: 600; }
+    .blog-more { text-align: center; }
+    .blog-more a { color: #e8a020; text-decoration: none; font-size: 0.9rem; font-weight: 700; }
+
+    /* EMAIL SIGNUP */
+    .signup { max-width: 600px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+    .signup h2 { font-size: 1.6rem; font-weight: 900; margin-bottom: 0.75rem; }
+    .signup p { color: #666; margin-bottom: 1.5rem; }
+    .email-form { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 0.75rem; }
+    .email-form input { padding: 0.85rem 1.2rem; border-radius: 8px; border: 1px solid #333; background: #1a1a1a; color: #f0ede8; font-size: 1rem; width: 280px; outline: none; }
+    .email-form input:focus { border-color: #e8a020; }
+    .email-form input::placeholder { color: #555; }
+    .form-note { font-size: 0.8rem; color: #555; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid #1a1a1a; padding: 2rem; text-align: center; color: #444; font-size: 0.85rem; }
+    footer span { color: #e8a020; }
+
+    @media (max-width: 600px) {
+      .nav-links .nav-link-hide { display: none; }
+      .email-form input { width: 100%; }
+      .email-form { flex-direction: column; align-items: center; }
+      .btn-secondary { margin-left: 0; margin-top: 0.5rem; }
+      .trust-points { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Dirt<span>School</span></a>
+  <div class="nav-links">
+    <a href="/blog/free-cheat-sheets.html">Free Cheat Sheets</a>
+    <a href="/blog/free-templates.html">Free Templates</a>
+    <a href="/blog/practice-tests.html">Practice Tests</a>
+    <div class="nav-dropdown nav-link-hide">
+      <a>Practice ▾</a>
+      <div class="dropdown-menu">
+        <div class="dm-label">IUOE</div>
+        <a href="/practice-tests/iuoe-practice-test.html">Full Interactive Test</a>
+        <a href="/blog/iuoe-test-math-questions.html">Math Questions</a>
+        <a href="/blog/iuoe-mechanical-reasoning-practice.html">Mechanical Reasoning</a>
+        <a href="/blog/how-to-pass-iuoe-test.html">How to Pass</a>
+        <a href="/blog/iuoe-test-tips.html">Test Tips</a>
+        <hr>
+        <div class="dm-label">Red Seal</div>
+        <a href="/blog/red-seal-heavy-equipment-exam.html">Exam Guide</a>
+        <a href="/practice-tests/red-seal-practice-test.html">Full Interactive Test</a>
+        <hr>
+        <div class="dm-label">NCCER</div>
+        <a href="/blog/nccer-heavy-equipment-test.html">Test Guide</a>
+        <a href="/practice-tests/nccer-practice-test.html">Full Interactive Test</a>
+        <hr>
+        <a href="/blog/heavy-equipment-operator-certification-guide.html" style="color:#888;">All Certifications</a>
+      </div>
+    </div>
+    <a href="/blog/">Blog</a>
+    <a href="https://dirtschool.gumroad.com" class="nav-cta">Get the Guides →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">✅ Study Guides Available Now</div>
+  <h1>Pass Your Heavy Equipment Test<br><em>First Try.</em></h1>
+  <p class="hero-sub">Haven't done math in 10 years? Test wording throwing you off? You're not the only one. Dirt School is built for real operators — not classroom kids.</p>
+  <p style="color:#aaa;font-size:1rem;max-width:480px;margin:0 auto 2rem;">You already know how to run iron. This just helps you pass the test.</p>
+  <div class="hero-cta">
+    <a href="https://dirtschool.gumroad.com/l/iuoe-study-guide" class="btn">Start Passing Today — $9.99 →</a>
+    <a href="#products" class="btn btn-secondary">See All Guides</a>
+  </div>
+  <p class="hero-note">IUOE · Red Seal · NCCER · Instant PDF download</p>
+
+  <!-- QUICK ACCESS BUTTONS -->
+  <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid #1a1a1a;">
+    <p style="color:#555;font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:1.5rem;text-align:center;">Start with these free resources</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;">
+      <a href="/blog/free-cheat-sheets.html" style="display:flex;flex-direction:column;background:#111;border:1px solid #333;border-radius:10px;padding:1.25rem;text-decoration:none;transition:border-color 0.2s,transform 0.1s;text-align:center;" onmouseover="this.style.borderColor='#e8a020';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#333';this.style.transform='translateY(0)'">
+        <span style="font-size:1.5rem;margin-bottom:.5rem;">📄</span>
+        <span style="color:#f0ede8;font-weight:800;font-size:.95rem;">Cheat Sheets</span>
+        <span style="color:#666;font-size:.75rem;margin-top:.4rem;">Quick refs</span>
+        <span style="color:#e8a020;font-size:.75rem;margin-top:.5rem;font-weight:700;">Free →</span>
+      </a>
+      <a href="/blog/practice-tests.html" style="display:flex;flex-direction:column;background:#111;border:1px solid #333;border-radius:10px;padding:1.25rem;text-decoration:none;transition:border-color 0.2s,transform 0.1s;text-align:center;" onmouseover="this.style.borderColor='#e8a020';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#333';this.style.transform='translateY(0)'">
+        <span style="font-size:1.5rem;margin-bottom:.5rem;">📝</span>
+        <span style="color:#f0ede8;font-weight:800;font-size:.95rem;">Practice Tests</span>
+        <span style="color:#666;font-size:.75rem;margin-top:.4rem;">Full exams</span>
+        <span style="color:#e8a020;font-size:.75rem;margin-top:.5rem;font-weight:700;">Free →</span>
+      </a>
+      <a href="/blog/free-templates.html" style="display:flex;flex-direction:column;background:#111;border:1px solid #333;border-radius:10px;padding:1.25rem;text-decoration:none;transition:border-color 0.2s,transform 0.1s;text-align:center;" onmouseover="this.style.borderColor='#e8a020';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#333';this.style.transform='translateY(0)'">
+        <span style="font-size:1.5rem;margin-bottom:.5rem;">🗂️</span>
+        <span style="color:#f0ede8;font-weight:800;font-size:.95rem;">Templates</span>
+        <span style="color:#666;font-size:.75rem;margin-top:.4rem;">PDF forms</span>
+        <span style="color:#e8a020;font-size:.75rem;margin-top:.5rem;font-weight:700;">Free →</span>
+      </a>
+      <a href="https://dirtcalculator.ca" style="display:flex;flex-direction:column;background:#111;border:1px solid #333;border-radius:10px;padding:1.25rem;text-decoration:none;transition:border-color 0.2s,transform 0.1s;text-align:center;" onmouseover="this.style.borderColor='#e8a020';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#333';this.style.transform='translateY(0)'">
+        <span style="font-size:1.5rem;margin-bottom:.5rem;">🧮</span>
+        <span style="color:#f0ede8;font-weight:800;font-size:.95rem;">Dirt Calculator</span>
+        <span style="color:#666;font-size:.75rem;margin-top:.4rem;">22 Free Tools</span>
+        <span style="color:#e8a020;font-size:.75rem;margin-top:.5rem;font-weight:700;">Free →</span>
+      </a>
+      <a href="https://dirtschool.gumroad.com/l/heo-toolkit?layout=profile" style="display:flex;flex-direction:column;background:#111;border:1px solid #333;border-radius:10px;padding:1.25rem;text-decoration:none;transition:border-color 0.2s,transform 0.1s;text-align:center;" onmouseover="this.style.borderColor='#e8a020';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#333';this.style.transform='translateY(0)'">
+        <span style="font-size:1.5rem;margin-bottom:.5rem;">🛠️</span>
+        <span style="color:#f0ede8;font-weight:800;font-size:.95rem;">HEO Toolkit</span>
+        <span style="color:#666;font-size:.75rem;margin-top:.4rem;">Calculators & logs</span>
+        <span style="color:#e8a020;font-size:.75rem;margin-top:.5rem;font-weight:700;">Free →</span>
+      </a>
+      <a href="/blog/" style="display:flex;flex-direction:column;background:#111;border:1px solid #333;border-radius:10px;padding:1.25rem;text-decoration:none;transition:border-color 0.2s,transform 0.1s;text-align:center;" onmouseover="this.style.borderColor='#e8a020';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#333';this.style.transform='translateY(0)'">
+        <span style="font-size:1.5rem;margin-bottom:.5rem;">📚</span>
+        <span style="color:#f0ede8;font-weight:800;font-size:.95rem;">All Resources</span>
+        <span style="color:#666;font-size:.75rem;margin-top:.4rem;">Blog & guides</span>
+        <span style="color:#e8a020;font-size:.75rem;margin-top:.5rem;font-weight:700;">Browse →</span>
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="problem-inner">
+    <div class="section-label">Why Most Operators Fail</div>
+    <h2>It's not the work.<br>It's the test.</h2>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="icon">📐</div>
+        <strong>Haven't done math in years</strong>
+        <p>You've been calculating load weights and percent grade in your head for years. Writing it down on a timed test is different.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">📄</div>
+        <strong>Test language throws you off</strong>
+        <p>Safety regs and formal wording confuse operators who know the work but haven't seen a written exam since grade school.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">❌</div>
+        <strong>3 attempts. Don't waste the first one.</strong>
+        <p>Most guys don't fail because they're dumb. They fail because they weren't prepared for how the test is written. Don't walk in cold.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">📚</div>
+        <strong>No good study material exists</strong>
+        <p>Generic aptitude prep books use train problems and geometry. Nothing built for operators, by operators. Until now.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution">
+  <div class="section-label">The Solution</div>
+  <h2>Study material that actually makes sense.</h2>
+  <p>Every example uses real machines, real job sites, and real scenarios. Written by someone who grew up in this industry — not a textbook publisher.</p>
+  <div class="features">
+    <div class="feature">
+      <div class="check">✓</div>
+      <div>
+        <strong>Real-world math examples</strong>
+        <p>Cat 330 bucket capacities, haul truck loads, percent grade — not train problems.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="check">✓</div>
+      <div>
+        <strong>Job site knowledge</strong>
+        <p>Grade stakes, FLRA, radio comms, working with surveyors. The stuff that's never in any book.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="check">✓</div>
+      <div>
+        <strong>Full practice tests</strong>
+        <p>40-100 questions depending on the exam, with answer keys and scoring rubrics.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="check">✓</div>
+      <div>
+        <strong>Exam trap breakdowns</strong>
+        <p>How the test tries to trick you. Unit traps, "which is NOT" questions, conservative answers.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="check">✓</div>
+      <div>
+        <strong>10-minute cram sheets</strong>
+        <p>Every critical number on one page. Read it before you walk in.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="check">✓</div>
+      <div>
+        <strong>Study plans included</strong>
+        <p>Day-by-day 7-day prep schedule so you know exactly what to do and when.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="products-inner">
+    <div class="section-label">Study Guides</div>
+    <h2>Pick your exam. Get the guide.</h2>
+    <p class="products-sub">All guides are instant PDF downloads. Written in plain English. No fluff.</p>
+    <div class="product-grid">
+
+      <div class="product-card flagship">
+        <div class="flagship-badge">🏆 Flagship Guide</div>
+        <div class="tag">Canada &amp; USA</div>
+        <h3>Pass the IUOE Aptitude Test — The Complete Operator's Study Guide</h3>
+        <p>The test that gets experienced operators — this guide fixes that. Full exam prep with real-world examples, not textbook garbage.</p>
+        <ul>
+          <li>19 chapters of real operator knowledge</li>
+          <li>Math, mechanical reasoning, reading, spatial</li>
+          <li>40-question practice test with answer key</li>
+          <li>7-day study plan + 10-min cram sheet</li>
+          <li>How the test tries to trick you</li>
+        </ul>
+        <div class="price">CAD $9.99 <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/iuoe-study-guide" class="btn">Get This Guide →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="tag">Canada</div>
+        <h3>Red Seal Heavy Equipment Operator — Complete Exam Prep Guide</h3>
+        <p>Everything you need for the Red Seal HEO endorsement. Covers Dozer, Excavator, and all equipment streams.</p>
+        <ul>
+          <li>Based on the National Occupational Analysis</li>
+          <li>100-question practice test with detailed answers</li>
+          <li>Canadian regulations: WorkSafe, WHMIS, Fisheries Act</li>
+          <li>Field vs Exam callouts throughout</li>
+          <li>Full reference guide included</li>
+        </ul>
+        <div class="price">CAD $9.99 <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/redseal-heo-guide" class="btn">Get This Guide →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="tag">USA</div>
+        <h3>NCCER Heavy Equipment Operations — Complete Study Guide</h3>
+        <p>Full NCCER Level 1-3 curriculum prep. Written + practical evaluation coverage for all equipment types.</p>
+        <ul>
+          <li>OSHA safety standards and regulations</li>
+          <li>All machine types: excavator, dozer, grader, loader</li>
+          <li>50-question practice test with answer key</li>
+          <li>Practical evaluation checklist: what gets you failed instantly</li>
+          <li>Equipment inspection procedures</li>
+        </ul>
+        <div class="price">CAD $9.99 <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/nccer-heo-guide" class="btn">Get This Guide →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="tag">Alberta</div>
+        <h3>Pass the IUOE Aptitude Test — Local 955 Alberta Edition</h3>
+        <p>Alberta-specific: oil sands, pipeline, H2S safety, and real 2024 wage data from the CBA. Built for Local 955 applicants.</p>
+        <ul>
+          <li>Alberta-specific content throughout</li>
+          <li>Math, mechanical, reading &amp; spatial sections</li>
+          <li>8 diagrams — gears, levers, pulleys, rotation</li>
+          <li>60-question full mock test with answer key</li>
+          <li>Real 2024 wage rates: $44–$82/hr by classification</li>
+        </ul>
+        <div class="price">CAD $9.99 <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/iuoe-955" class="btn">Get This Guide →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="tag">Canada &amp; USA</div>
+        <h3>Pass Your Class 1 / Class 3 Road Test — The Complete Pre-Trip &amp; Commercial Driver Guide</h3>
+        <p>Everything for Class 1 or Class 3 road test success. Pre-trip inspection, air brakes, and real driving scenarios.</p>
+        <ul>
+          <li>Pre-trip inspection checklist (80+ points)</li>
+          <li>Air brake system fundamentals</li>
+          <li>Coupling and uncoupling procedures</li>
+          <li>Road test scoring rubric breakdown</li>
+          <li>Common immediate-fail scenarios</li>
+        </ul>
+        <div class="price">CAD $9.99 <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/class-pretrip" class="btn">Get This Guide →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="tag">Alberta</div>
+        <h3>Pass Your Class 1 / Class 3 Road Test (Alberta) — Complete Pre-Trip, Air Brakes &amp; Driving System</h3>
+        <p>Alberta-specific Class 1/3 road test. Pre-trip, air brakes, and exact Alberta testing criteria.</p>
+        <ul>
+          <li>Alberta pre-trip inspection standards</li>
+          <li>Air brake diagnostics and emergency systems</li>
+          <li>Alberta road test routes and common traps</li>
+          <li>Scoring rubric with pass/fail examples</li>
+          <li>Vehicle inspection log templates</li>
+        </ul>
+        <div class="price">CAD $9.99 <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/class1-3-alberta" class="btn">Get This Guide →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="tag">Tools &amp; Logs</div>
+        <h3>Heavy Equipment Operator Log System (Daily Logs, Inspection, Fuel Tracking &amp; Field Operations)</h3>
+        <p>Complete daily log system for operators. Track hours, fuel, machine condition, and job site activities on every shift.</p>
+        <ul>
+          <li>Daily equipment operation log template</li>
+          <li>Fuel and maintenance tracking</li>
+          <li>Pre-start inspection checklist</li>
+          <li>Production tracking worksheet</li>
+          <li>PDF forms ready to print and use</li>
+        </ul>
+        <div class="price">CAD $9.99 <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/heo-log" class="btn">Get This Guide →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="tag">Safety &amp; Compliance</div>
+        <h3>Job Site Safety System (Toolbox Talks, FLHA Forms, JHA + Safety Checklists)</h3>
+        <p>Complete safety documentation system for crews. Toolbox talks, FLHA forms, JHA templates, and daily safety checklists.</p>
+        <ul>
+          <li>30 pre-written toolbox talk templates</li>
+          <li>FLHA (Field Level Hazard Assessment) forms</li>
+          <li>JHA (Job Hazard Analysis) worksheets</li>
+          <li>Daily safety checklist for operators</li>
+          <li>Incident report and near-miss forms</li>
+        </ul>
+        <div class="price">CAD $9.99 <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/job-safety" class="btn">Get This Guide →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="tag">Business &amp; Tools</div>
+        <h3>Construction Estimating System (Cut/Fill, Costs, Bids + Templates)</h3>
+        <p>Complete estimating system for operators bidding work. Calculate cut/fill, costs, and generate professional bids.</p>
+        <ul>
+          <li>Cut/fill volume calculation worksheet</li>
+          <li>Production rate tables for all equipment</li>
+          <li>Cost breakdown by machine type</li>
+          <li>Bid template with contingency planning</li>
+          <li>Excel calculator (ready to use)</li>
+        </ul>
+        <div class="price">CAD $9.99 <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/estimating-system" class="btn">Get This Guide →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="tag">Tools &amp; Reference</div>
+        <h3>Operator Toolkit — Heavy Equipment Calculators, Logbook &amp; Checklist</h3>
+        <p>All-in-one operator reference. Calculators, production tables, equipment specs, and daily checklists in one handy guide.</p>
+        <ul>
+          <li>Heavy equipment calculator guide</li>
+          <li>Production rates by machine and material</li>
+          <li>Hydraulic pressure conversion charts</li>
+          <li>Daily operator logbook</li>
+          <li>Equipment specification quick reference</li>
+        </ul>
+        <div class="price">FREE <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/heo-toolkit" class="btn">Get Free Access →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="tag">Business Guide</div>
+        <h3>Owner-Operator Start-Up Guide: Machine Financing, Business Setup &amp; Scaling</h3>
+        <p>Everything an operator needs to start their own company. Financing, setup, legal, and scaling to a small fleet.</p>
+        <ul>
+          <li>Machine financing and purchase strategy</li>
+          <li>Business registration and liability setup</li>
+          <li>Insurance requirements checklist</li>
+          <li>Contract templates and rate setting</li>
+          <li>Scaling from solo to multi-machine operation</li>
+        </ul>
+        <div class="price">CAD $9.99 <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/owner-operator" class="btn">Get This Guide →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="tag">Mining &amp; Heavy</div>
+        <h3>Mining Operations Guide — Haul Road Protocol, MSHA, and the $200k Operator Path</h3>
+        <p>Complete guide to mining operations. Haul road protocols, MSHA compliance, production standards, and the $200k operator path.</p>
+        <ul>
+          <li>Mining haul road design and maintenance</li>
+          <li>MSHA regulations for surface mining</li>
+          <li>Production targets and safety metrics</li>
+          <li>Advanced operator skills for mining</li>
+          <li>Wage progression: From $80k to $200k+ annually</li>
+        </ul>
+        <div class="price">CAD $9.99 <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/mining-operations" class="btn">Get This Guide →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="tag">Apprentice &amp; New</div>
+        <h3>First Year Apprentice Field Guide — How to Not Get Fired in Year One</h3>
+        <p>Survival guide for first-year apprentices. Camp etiquette, job site culture, safety, and how to earn respect from seasoned operators.</p>
+        <ul>
+          <li>Camp life and crew dynamics</li>
+          <li>Machine operation fundamentals</li>
+          <li>Safety culture and working smart</li>
+          <li>Communication on job sites</li>
+          <li>Foreman expectations and performance</li>
+        </ul>
+        <div class="price">CAD $9.99 <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/first-year-apprentice" class="btn">Get This Guide →</a>
+      </div>
+
+      <div class="product-card">
+        <div class="tag">Pipeline &amp; Specialized</div>
+        <h3>Pipeline Operator Handbook — Spread Roles, LOA Math, and the $40–70k Civil-to-Pipeline Transition</h3>
+        <p>Complete guide to pipeline operations. Spread roles, crew structures, LOA (Letter of Award) math, and the transition from civil.</p>
+        <ul>
+          <li>Pipeline crew spread structure and roles</li>
+          <li>LOA (Letter of Award) calculations and rates</li>
+          <li>Daily operations on a spread</li>
+          <li>Equipment specific to pipeline work</li>
+          <li>Wage progression from civil to pipeline ($40–70k+)</li>
+        </ul>
+        <div class="price">CAD $9.99 <span>/ instant download</span></div>
+        <a href="https://dirtschool.gumroad.com/l/pipeline-operator" class="btn">Get This Guide →</a>
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="section-label">Why Dirt School</div>
+  <h2>Built by operators.<br>Not educators.</h2>
+  <p style="color:#666;max-width:560px;margin:0 auto 1.5rem;">The person who wrote these guides grew up in the heavy equipment industry in BC and Yukon. Worked camp jobs every summer on highway projects. No formal tickets. Learned from old-timers, not a classroom.</p>
+  <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;">
+    <div style="background:#111;border:1px solid #222;border-radius:8px;padding:0.75rem 1.25rem;font-size:0.9rem;color:#aaa;">✓ Learned on real job sites</div>
+    <div style="background:#111;border:1px solid #222;border-radius:8px;padding:0.75rem 1.25rem;font-size:0.9rem;color:#aaa;">✓ Not from textbooks</div>
+    <div style="background:#111;border:1px solid #222;border-radius:8px;padding:0.75rem 1.25rem;font-size:0.9rem;color:#aaa;">✓ Built for guys who hate school</div>
+    <div style="background:#111;border:1px solid #222;border-radius:8px;padding:0.75rem 1.25rem;font-size:0.9rem;color:#aaa;">✓ Based on real operator experience</div>
+  </div>
+  <div class="trust-points">
+    <div class="trust-point">
+      <div class="num">500K+</div>
+      <div class="label">Operators in North America</div>
+    </div>
+    <div class="trust-point">
+      <div class="num">3</div>
+      <div class="label">Exam streams covered</div>
+    </div>
+    <div class="trust-point">
+      <div class="num">$0</div>
+      <div class="label">Textbook garbage inside</div>
+    </div>
+  </div>
+  <blockquote style="max-width:560px;margin:0 auto;border-left:3px solid #e8a020;padding-left:1.2rem;color:#888;font-style:italic;text-align:left;">
+    "You haven't been in a classroom in ten years. You know how to run iron. What you need is someone to translate the test — not explain the trade from scratch."
+  </blockquote>
+
+  <!-- PREVIEW -->
+  <div style="max-width:860px;margin:3rem auto 0;background:#111;border:1px solid #222;border-radius:14px;padding:2rem;text-align:left;">
+    <p style="font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e8a020;margin-bottom:1rem;">What's Inside</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+      <div>
+        <p style="font-weight:700;color:#f0ede8;margin-bottom:0.5rem;">Job Site Knowledge</p>
+        <ul style="color:#666;font-size:0.85rem;padding-left:1.2rem;">
+          <li>Reading grade stakes</li>
+          <li>FLRA and daily paperwork</li>
+          <li>Working with the survey crew</li>
+          <li>Real safety stories</li>
+          <li>Camp life and the career</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-weight:700;color:#f0ede8;margin-bottom:0.5rem;">Test Prep</p>
+        <ul style="color:#666;font-size:0.85rem;padding-left:1.2rem;">
+          <li>Math with construction examples</li>
+          <li>Hydraulics, gears, pulleys, levers</li>
+          <li>Reading comprehension</li>
+          <li>Spatial reasoning + free practice links</li>
+          <li>40-question mock test</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-weight:700;color:#f0ede8;margin-bottom:0.5rem;">Extras</p>
+        <ul style="color:#666;font-size:0.85rem;padding-left:1.2rem;">
+          <li>7-day study plan</li>
+          <li>10-minute cram sheet</li>
+          <li>How the test tries to trick you</li>
+          <li>Formula reference card</li>
+          <li>Full glossary</li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1a1a1a;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+      <p style="color:#666;font-size:0.9rem;">139 pages · Instant PDF download · $9.99</p>
+      <a href="https://dirtschool.gumroad.com/l/iuoe-study-guide" class="btn">Get the IUOE Guide →</a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog">
+  <div class="blog-inner">
+    <div class="section-label">From the Blog</div>
+    <h2>Real talk for real operators.</h2>
+    <p class="blog-sub">No sponsored content. No clickbait. Just useful information.</p>
+    <div class="blog-grid">
+      <a href="/blog/what-is-on-iuoe-aptitude-test.html" class="blog-card">
+        <div class="blog-icon">📝</div>
+        <h3>What's Actually on the IUOE Aptitude Test</h3>
+        <p>The 4 sections, what trips experienced operators up, and how to prepare.</p>
+        <div class="read">Read →</div>
+      </a>
+      <a href="/blog/how-to-get-into-iuoe-bc.html" class="blog-card">
+        <div class="blog-icon">🏗️</div>
+        <h3>How to Get Into the IUOE in BC</h3>
+        <p>Local 115, how to apply, what happens after you pass.</p>
+        <div class="read">Read →</div>
+      </a>
+      <a href="/blog/heavy-equipment-operator-wages-canada-2026.html" class="blog-card">
+        <div class="blog-icon">💰</div>
+        <h3>HEO Wages in Canada — 2026</h3>
+        <p>Union vs non-union, pipeline LOA, the pension math nobody talks about.</p>
+        <div class="read">Read →</div>
+      </a>
+    </div>
+    <div class="blog-more"><a href="/blog/">View all articles →</a></div>
+  </div>
+</section>
+
+<!-- STUDY GUIDES / FREE RESOURCES -->
+<section style="background:#0d0d0d;padding:4rem 2rem;border-top:1px solid #1a1a1a;">
+  <div style="max-width:860px;margin:0 auto;">
+    <p style="font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e8a020;margin-bottom:1rem;">Free Practice</p>
+    <h2 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:900;margin-bottom:.5rem;">Practice questions. Free.</h2>
+    <p style="color:#666;margin-bottom:2rem;">No signup needed. Real construction examples. Pick your exam.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;">
+      <div style="background:#111;border:1px solid #222;border-radius:10px;padding:1.5rem;">
+        <p style="color:#e8a020;font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:.75rem;">IUOE</p>
+        <ul style="list-style:none;margin:0;padding:0;">
+          <li style="margin-bottom:.5rem;"><a href="/practice-tests/iuoe-practice-test.html" style="color:#ccc;text-decoration:none;font-size:.95rem;">→ Full Interactive Test</a></li>
+          <li style="margin-bottom:.5rem;"><a href="/blog/iuoe-test-math-questions.html" style="color:#ccc;text-decoration:none;font-size:.95rem;">→ Math Questions</a></li>
+          <li style="margin-bottom:.5rem;"><a href="/blog/iuoe-mechanical-reasoning-practice.html" style="color:#ccc;text-decoration:none;font-size:.95rem;">→ Mechanical Reasoning</a></li>
+          <li style="margin-bottom:.5rem;"><a href="/blog/how-to-pass-iuoe-test.html" style="color:#ccc;text-decoration:none;font-size:.95rem;">→ How to Pass</a></li>
+          <li><a href="/blog/iuoe-test-tips.html" style="color:#ccc;text-decoration:none;font-size:.95rem;">→ Test Tips</a></li>
+        </ul>
+      </div>
+      <div style="background:#111;border:1px solid #222;border-radius:10px;padding:1.5rem;">
+        <p style="color:#e8a020;font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:.75rem;">Red Seal</p>
+        <ul style="list-style:none;margin:0;padding:0;">
+          <li style="margin-bottom:.5rem;"><a href="/blog/red-seal-heavy-equipment-exam.html" style="color:#ccc;text-decoration:none;font-size:.95rem;">→ Exam Guide</a></li>
+          <li><a href="/practice-tests/red-seal-practice-test.html" style="color:#ccc;text-decoration:none;font-size:.95rem;">→ Full Interactive Test</a></li>
+        </ul>
+        <p style="color:#e8a020;font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:.75rem;margin-top:1.25rem;">NCCER</p>
+        <ul style="list-style:none;margin:0;padding:0;">
+          <li style="margin-bottom:.5rem;"><a href="/blog/nccer-heavy-equipment-test.html" style="color:#ccc;text-decoration:none;font-size:.95rem;">→ Test Guide</a></li>
+          <li style="margin-bottom:.5rem;"><a href="/practice-tests/nccer-practice-test.html" style="color:#ccc;text-decoration:none;font-size:.95rem;">→ Full Interactive Test</a></li>
+        </ul>
+        <p style="color:#e8a020;font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:.75rem;margin-top:1.25rem;">General</p>
+        <ul style="list-style:none;margin:0;padding:0;">
+          <li style="margin-bottom:.5rem;"><a href="/blog/heavy-equipment-operator-math.html" style="color:#ccc;text-decoration:none;font-size:.95rem;">→ Construction Math</a></li>
+          <li><a href="/blog/heavy-equipment-operator-certification-guide.html" style="color:#ccc;text-decoration:none;font-size:.95rem;">→ Certification Guide</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL SIGNUP -->
+<section style="background:#111;border-top:2px solid #e8a020;border-bottom:2px solid #e8a020;padding:3.5rem 2rem;">
+  <div style="max-width:600px;margin:0 auto;text-align:center;">
+    <p style="font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e8a020;margin-bottom:.75rem;">Free Download</p>
+    <h2 style="font-size:1.8rem;font-weight:900;margin-bottom:.75rem;letter-spacing:-.5px;">Get the free IUOE cram sheet.</h2>
+    <p style="color:#888;margin-bottom:1.5rem;">Every critical number, formula, and exam trap on one page. Read it before you walk into the test. Instant download, no spam.</p>
+    <form class="email-form" onsubmit="handleSubmit(event)">
+      <input type="email" id="email" placeholder="your@email.com" required>
+      <button type="submit" class="btn">Send Me the Cram Sheet →</button>
+    </form>
+    <p class="form-note" style="margin-top:.75rem;">Used by operators studying for IUOE, Red Seal &amp; NCCER</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 <span>Dirt School</span> · dirtschool.ca · Built by operators, for operators.</p>
+</footer>
+
+<script>
+// Dropdown nav toggle
+document.querySelectorAll('.nav-dropdown').forEach(function(dd) {
+  dd.querySelector('a').addEventListener('click', function(e) {
+    e.stopPropagation();
+    dd.classList.toggle('open');
+  });
+});
+document.addEventListener('click', function() {
+  document.querySelectorAll('.nav-dropdown').forEach(function(dd) {
+    dd.classList.remove('open');
+  });
+});
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const emailInput = e.target.querySelector('input[type="email"]');
+  const btn = e.target.querySelector('button');
+  btn.textContent = '✓ Subscribed!';
+  btn.style.background = '#2a7a2a';
+  emailInput.disabled = true;
+  btn.disabled = true;
+  fetch('/signup', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: emailInput.value, ts: new Date().toISOString()})
+  }).catch(() => {});
+}
+</script>
+
+</body>
+</html>

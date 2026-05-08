@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-69K981KFVB"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-69K981KFVB');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cut and Fill Volume Calculator — How to Use One | Dirt School</title>
+    <link rel="canonical" href="https://dirtschool.ca/blog/cut-fill-volume-calculator-how-to-use/">
+
+  <meta name="description" content="How to calculate cut and fill volumes for earthwork jobs. Formulas, swell factors, and a free online calculator that works offline on your phone.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d0d0d; color: #f0ede8; line-height: 1.8; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; border-bottom: 1px solid #222; background: #0d0d0d; }
+    .logo { font-size: 1.4rem; font-weight: 800; color: #f0ede8; text-decoration: none; }
+    .logo span { color: #e8a020; }
+    .container { max-width: 740px; margin: 0 auto; padding: 3rem 2rem; }
+    .post-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #e8a020; margin-bottom: 1rem; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; letter-spacing: -0.5px; }
+    .meta { color: #666; font-size: 0.85rem; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #1a1a1a; }
+    h2 { font-size: 1.3rem; font-weight: 800; margin: 2.5rem 0 1rem; color: #f0ede8; }
+    h3 { font-size: 1.05rem; font-weight: 700; margin: 1.5rem 0 0.5rem; color: #e8a020; }
+    p { color: #ccc; margin-bottom: 1.2rem; font-size: 1.05rem; }
+    ul, ol { color: #ccc; margin: 0 0 1.2rem 1.5rem; font-size: 1.05rem; }
+    li { margin-bottom: 0.5rem; }
+    strong { color: #f0ede8; }
+    .formula-box { background: #111; border: 1px solid #333; border-left: 3px solid #e8a020; border-radius: 8px; padding: 1rem 1.2rem; margin: 1.5rem 0; font-family: monospace; font-size: 1rem; color: #e8a020; }
+    .example-box { background: #0a1a0a; border: 1px solid #1a3a1a; border-radius: 8px; padding: 1.2rem; margin: 1.5rem 0; }
+    .example-box strong { color: #22aa44; display: block; margin-bottom: 0.5rem; }
+    .example-box p { color: #aaccaa; margin: 0; font-size: 0.95rem; }
+    .calc-cta { background: #0d1a0d; border: 1px solid #1a3a1a; border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .calc-cta p { color: #aaccaa; margin: 0; font-size: 0.95rem; }
+    .calc-btn { display: inline-block; background: #22aa44; color: #fff; font-weight: 800; padding: 0.7rem 1.5rem; border-radius: 8px; text-decoration: none; font-size: 0.95rem; white-space: nowrap; }
+    .cta-box { background: #111; border: 1px solid #333; border-radius: 12px; padding: 2rem; margin-top: 3rem; text-align: center; }
+    .cta-box h3 { font-size: 1.3rem; margin-bottom: 0.75rem; color: #f0ede8; }
+    .cta-box p { color: #aaa; margin-bottom: 1.2rem; }
+    .btn { display: inline-block; background: #e8a020; color: #0d0d0d; font-weight: 800; padding: 0.8rem 1.8rem; border-radius: 8px; text-decoration: none; font-size: 1rem; }
+    footer { border-top: 1px solid #1a1a1a; padding: 2rem; text-align: center; color: #444; font-size: 0.85rem; margin-top: 4rem; }
+    footer span { color: #e8a020; }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo">Dirt<span>School</span></a>
+  <a href="https://dirtschool.gumroad.com" style="color:#e8a020;text-decoration:none;font-weight:700;font-size:0.9rem;">Study Guides →</a>
+</nav>
+<div class="container">
+  <div class="post-label">Earthwork · Cut/Fill · Calculator</div>
+  <h1>Cut and Fill Volume Calculator — How to Use One</h1>
+  <div class="meta">April 2026 &nbsp;·&nbsp; 7 min read &nbsp;·&nbsp; Dirt School</div>
+
+  <p>Cut and fill calculations are the foundation of any earthwork estimate. Before you can figure out truck counts, equipment hours, or material costs — you need the volume. Here's how the math works, what the common mistakes are, and how a cut/fill calculator handles it for you.</p>
+
+  <div class="calc-cta">
+    <p>Want to skip the math? Use the free cut/fill calculator at dirtcalculator.ca — works offline on your phone.</p>
+    <a href="https://dirtcalculator.ca/earthwork/cut-fill.html" class="calc-btn">Open Calculator →</a>
+  </div>
+
+  <h2>The Three Volume Units You Need to Know</h2>
+  <p>Every cut/fill calculation involves three different states of material — and they all have different volumes:</p>
+  <ul>
+    <li><strong>BCY / BCM (Bank):</strong> material in the ground, undisturbed. This is what you measure on the site plan. Always start here.</li>
+    <li><strong>LCY / LCM (Loose):</strong> material after it's been excavated and broken up. It swells — takes up more space. This is what goes in the truck.</li>
+    <li><strong>CCY / CCM (Compacted):</strong> material after it's been placed and compacted. It shrinks. This is what you need for fills and embankments.</li>
+  </ul>
+  <p>A cut/fill calculator works in bank volume. You apply swell and shrinkage factors to convert to the other units.</p>
+
+  <h2>Basic Cut Volume Formula</h2>
+  <div class="formula-box">Volume (BCY) = Length × Width × Depth ÷ 27</div>
+  <p>All measurements in feet. Divide by 27 to convert cubic feet to cubic yards.</p>
+  <div class="formula-box">Volume (BCM) = Length × Width × Depth</div>
+  <p>All measurements in metres. Result is directly in cubic metres.</p>
+
+  <div class="example-box">
+    <strong>📐 Example: Building Pad Cut</strong>
+    <p>Pad area: 80 ft × 100 ft<br>
+    Average cut depth: 2 ft<br>
+    Volume = 80 × 100 × 2 ÷ 27 = <strong>593 BCY</strong></p>
+  </div>
+
+  <h2>Average Depth Method</h2>
+  <p>On real sites, the cut depth isn't uniform across the whole area. The average depth method takes spot elevations on a grid, calculates the cut or fill at each point, and averages them.</p>
+  <ol>
+    <li>Walk the site with a laser level and grade rod</li>
+    <li>Take elevation shots on a 10–20 ft grid</li>
+    <li>Record existing vs proposed elevation at each point</li>
+    <li>Subtract existing from proposed: negative = cut, positive = fill</li>
+    <li>Average the depths across all grid points</li>
+    <li>Multiply average depth by total area</li>
+  </ol>
+  <p>This is exactly what a cut/fill calculator automates. You enter the grid points and it calculates total cut volume, total fill volume, and whether the site balances.</p>
+
+  <h2>Applying Swell Factor to Truck Loads</h2>
+  <p>Once you have your BCY volume, you need to convert to LCY to figure out truck loads. This is where people get burned most often.</p>
+  <div class="formula-box">LCY = BCY × (1 + Swell Fraction)</div>
+
+  <div class="example-box">
+    <strong>📐 Example: 593 BCY of common earth (25% swell)</strong>
+    <p>LCY = 593 × 1.25 = <strong>741 LCY</strong><br>
+    Tandem truck carries 12 LCY<br>
+    Loads = 741 ÷ 12 = <strong>62 loads</strong><br><br>
+    Without swell: 593 ÷ 12 = 49 loads — you'd be 13 loads short and over budget.</p>
+  </div>
+
+  <h2>Applying Shrinkage to Fill</h2>
+  <p>If you're placing and compacting fill material, the compacted volume is what you need in the ground. You'll need more loose material than the compacted volume.</p>
+  <div class="formula-box">LCY to Import = CCY Required ÷ Compaction Factor (~0.85 for common earth)</div>
+
+  <h2>Checking Site Balance</h2>
+  <p>On a balanced site, the cut material becomes the fill material — you're not hauling anything off or importing anything. To check if your site balances:</p>
+  <div class="formula-box">Available Fill (CCY) = Cut Volume (BCY) × Shrinkage Factor</div>
+  <p>Compare this to the fill required. If available fill &gt; fill required, you have excess to haul off. If less, you need to import.</p>
+
+  <div class="example-box">
+    <strong>📐 Example: Site Balance Check</strong>
+    <p>Cut: 600 BCY of common earth | Shrinkage factor: 0.85<br>
+    Available fill = 600 × 0.85 = <strong>510 CCY</strong><br>
+    Fill required: 480 CCY<br>
+    Result: 30 CCY surplus → haul off a few loads</p>
+  </div>
+
+  <h2>Using a Cut/Fill Calculator</h2>
+  <p>A good cut/fill calculator handles all of this automatically. Enter your area dimensions, average cut depth, material type, and truck payload — and it outputs BCY, LCY, truck load count, and whether you're over or under on fill.</p>
+  <p>The free calculators at <a href="https://dirtcalculator.ca" style="color:#e8a020;">dirtcalculator.ca</a> cover:</p>
+  <ul>
+    <li>Cut/fill volume (imperial and metric)</li>
+    <li>Swell and shrinkage with material presets</li>
+    <li>Haul truck match (how many trucks to keep the excavator busy)</li>
+    <li>Truck load count</li>
+    <li>Earthwork cost estimator</li>
+  </ul>
+  <p>Everything works offline — install it on your phone and use it in the field without signal.</p>
+
+  <div class="cta-box">
+    <h3>Estimating for Small Contractors</h3>
+    <p>Cut/fill math, swell factors, equipment costs, markup and profit — plus 6 pre-built bid templates and fillable estimate sheets.</p>
+    <a href="https://dirtschool.gumroad.com/l/estimating-system" class="btn">Get the Guide — $9.99 →</a>
+  </div>
+</div>
+<footer><p>© 2026 <span>Dirt School</span> · <a href="/" style="color:#666;">dirtschool.ca</a></p></footer>
+    <!-- EMAIL SIGNUP FOOTER -->
+    <div style="margin-top: 3em; padding: 2em; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #ff8c00;">
+        <h3 style="margin-top: 0; color: #000; font-size: 1.2em;">Get the Free Cram Sheet</h3>
+        <p style="color: #666; margin-bottom: 1em;">Master the formulas, definitions, and quick-reference guides used on every jobsite. Free 10-minute cram sheet + email updates.</p>
+        <form style="display: flex; gap: 8px; margin-bottom: 1em;">
+            <input type="email" placeholder="Your email" required style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.95em;">
+            <button type="submit" style="padding: 10px 20px; background: #ff8c00; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Get it Free</button>
+        </form>
+        <p style="font-size: 0.85em; color: #999; margin: 0;">✓ Instant PDF download | ✓ No spam | ✓ Used by 1,000+ operators</p>
+    </div>
+<script>
+// Auto-link operator terms to glossary
+const glossaryTerms = {
+  'swell factor': '/glossary/#S',
+  'bank cubic yard': '/glossary/#B',
+  'loose cubic yard': '/glossary/#L',
+  'compacted cubic yard': '/glossary/#C',
+  'percent grade': '/glossary/#G',
+  'grade stake': '/glossary/#G',
+  'living out allowance': '/glossary/#L',
+  'LOA': '/glossary/#L',
+  'IUOE': '/glossary/#I',
+  'dozer': '/glossary/#D',
+  'excavator': '/glossary/#E',
+  'haul road': '/glossary/#H',
+  'compaction': '/glossary/#C',
+  'grader': '/glossary/#G',
+  'apprenticeship': '/glossary/#A',
+  'H2S alive': '/glossary/#H',
+  'red seal': '/glossary/#R',
+  'class 1': '/glossary/#C',
+  'dispatch': '/glossary/#D',
+  'loader': '/glossary/#L',
+  'ADT': '/glossary/#A'
+};
+document.querySelectorAll('p, li, td, h2, h3').forEach(el => {
+  if (el.querySelectorAll('a').length === 0) {
+    let text = el.innerHTML;
+    Object.keys(glossaryTerms).forEach(term => {
+      const regex = new RegExp(`\\b${term}\\b`, 'gi');
+      text = text.replace(regex, `<a href="${glossaryTerms[term]}" style="color:#ff8c00;text-decoration:underline;cursor:pointer;">$&</a>`);
+    });
+    el.innerHTML = text;
+  }
+});
+</script>
+
+<!-- Disqus Comments -->
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = document.title;
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://dirtschool.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+<!-- GA4 Conversion Tracking -->
+<script>
+document.querySelectorAll('a[href*="gumroad.com"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        gtag('event', 'gumroad_click', {
+            'event_category': 'engagement',
+            'event_label': this.href,
+            'page_title': document.title,
+            'page_path': window.location.pathname
+        });
+    });
+});
+
+window.shareToX = window.shareToX || function() {
+    gtag('event', 'share', {'event_category': 'viral', 'event_label': 'twitter', 'page_path': window.location.pathname});
+};
+
+window.shareToReddit = window.shareToReddit || function() {
+    gtag('event', 'share', {'event_category': 'viral', 'event_label': 'reddit', 'page_path': window.location.pathname});
+};
+</script>
+
+<!-- EMAIL SIGNUP FORM (INJECTED) -->
+<section style="background:#111;border-top:1px solid #333;border-bottom:1px solid #333;padding:2.5rem 2rem;margin-top:4rem;">
+  <div style="max-width:600px;margin:0 auto;text-align:center;">
+    <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:.75rem;color:#f0ede8;">Get the free IUOE cram sheet</h3>
+    <p style="color:#888;margin-bottom:1.5rem;font-size:.95rem;">Every formula and exam trap on one page. Instant download, no spam.</p>
+    <form class="email-form" onsubmit="handleEmailSubmit(event)" style="display:flex;gap:.75rem;max-width:500px;margin:0 auto;">
+      <input type="email" placeholder="your@email.com" required style="flex:1;padding:.75rem;background:#0d0d0d;border:1px solid #333;border-radius:6px;color:#f0ede8;font-size:.95rem;">
+      <button type="submit" style="background:#e8a020;color:#0d0d0d;font-weight:800;padding:.75rem 1.5rem;border-radius:6px;border:none;cursor:pointer;font-size:.95rem;">Get It Free</button>
+    </form>
+  </div>
+</section>
+
+<script>
+function handleEmailSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const emailInput = form.querySelector('input[type="email"]');
+  const btn = form.querySelector('button');
+  const originalText = btn.textContent;
+  btn.textContent = '✓ Subscribed!';
+  btn.style.background = '#2a7a2a';
+  emailInput.disabled = true;
+  btn.disabled = true;
+  fetch('/signup', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: emailInput.value, source: window.location.pathname, ts: new Date().toISOString()})
+  }).catch(e => console.log('Signup recorded.'));
+}
+</script>
+
+</body>
+</html>

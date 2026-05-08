@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow admin/private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Sitemap
+Sitemap: https://dirtschool.ca/sitemap.xml

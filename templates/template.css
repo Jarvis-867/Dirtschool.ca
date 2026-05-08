@@ -1,0 +1,250 @@
+/* Dirt School Templates — printable safety forms
+   Designed to look right both on-screen (dark) AND when printed (clean white). */
+
+:root {
+  --bg: #0d0f12;
+  --bg-card: #16191e;
+  --border: #2a2f37;
+  --text: #e8eaed;
+  --text-muted: #9aa0a6;
+  --accent: #f59e0b;
+  --critical: #ef4444;
+  --good: #22c55e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.4;
+  padding: 20px;
+}
+
+.container { max-width: 850px; margin: 0 auto; }
+
+.back-link {
+  display: inline-block;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+.back-link:hover { color: var(--accent); }
+
+.print-bar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: var(--accent);
+  color: #000;
+  border: none;
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:hover { background: #fbbf24; }
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* Form sheet — looks like real paper */
+.form-sheet {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.form-header {
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.form-title .accent { color: var(--accent); }
+
+.form-brand {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+.form-brand strong { color: var(--accent); }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.form-row.three { grid-template-columns: 1fr 1fr 1fr; }
+.form-row.full { grid-template-columns: 1fr; }
+@media (max-width: 600px) {
+  .form-row, .form-row.three { grid-template-columns: 1fr; }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+.field label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.field-line {
+  border-bottom: 1px solid var(--border);
+  min-height: 28px;
+  padding: 4px 6px;
+}
+
+.section-h {
+  background: var(--bg);
+  border-left: 4px solid var(--accent);
+  padding: 8px 12px;
+  margin: 20px 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+table.form-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+}
+table.form-table th, table.form-table td {
+  border: 1px solid var(--border);
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+table.form-table th {
+  background: var(--bg);
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+table.form-table td.empty {
+  height: 36px;
+}
+
+.checkbox-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+.checkbox-item .box {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--text);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.signature-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+  padding: 8px 0;
+  font-size: 0.85rem;
+  align-items: end;
+}
+.signature-row .label-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.note {
+  background: var(--bg);
+  border-left: 3px solid var(--accent);
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 15px 0;
+  border-radius: 4px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 20px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  margin-top: 30px;
+}
+footer a { color: var(--accent); text-decoration: none; }
+
+/* PRINT — clean black & white */
+@media print {
+  :root {
+    --bg: #ffffff;
+    --bg-card: #ffffff;
+    --border: #000000;
+    --text: #000000;
+    --text-muted: #555555;
+    --accent: #000000;
+  }
+  body { padding: 0; background: white; color: black; font-size: 10pt; }
+  .back-link, .print-bar, footer .no-print { display: none !important; }
+  .form-sheet {
+    border: 1px solid #000;
+    box-shadow: none;
+    page-break-after: always;
+    padding: 20px;
+  }
+  .form-header { border-bottom: 3px solid #000; }
+  .form-title .accent, table.form-table th, .field label, .form-brand strong, .section-h {
+    color: #000 !important;
+  }
+  .section-h { background: #f0f0f0; border-left: 4px solid #000; }
+  table.form-table th { background: #f0f0f0; }
+  .field-line { border-bottom: 1px solid #000; min-height: 24px; }
+  .signature-row { border-bottom: 1px solid #000; }
+  .note { background: #f8f8f8; border-left: 3px solid #000; }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Red Seal HEO Practice Test — 30 Questions | Dirt School</title>
+<meta name="description" content="Free 30-question Red Seal Heavy Equipment Operator practice exam. Dozer + Excavator. Instant scoring. No signup. Built by operators.">
+<link rel="canonical" href="https://dirtschool.ca/practice-tests/red-seal-practice-test.html">
+<link rel="stylesheet" href="practice-test.css">
+</head>
+<body>
+<div class="container">
+  <a class="back-link" href="/">← Back to Dirt School</a>
+  <div class="header">
+    <h1>Free <span class="accent">Red Seal HEO</span> Practice Test</h1>
+    <p>30 questions • Dozer + Excavator • Instant scoring</p>
+  </div>
+  <div id="start-screen" class="start-screen"></div>
+  <div id="test-screen" class="test-screen"></div>
+  <div id="results-screen" class="results-screen"></div>
+  <footer>
+    Built by operators, for operators. © Dirt School · <a href="https://dirtschool.ca">dirtschool.ca</a>
+  </footer>
+</div>
+
+<script>
+const TEST_CONFIG = {
+  title: "Red Seal HEO — Free Practice Test",
+  description: "Based on the National Occupational Analysis. Dozer + Excavator stream.",
+  guideName: "Red Seal HEO",
+  guideUrl: "https://dirtschool.gumroad.com/l/redseal-heo-guide",
+  timeLimitMin: 45,
+  passMark: 70,
+  shuffle: false,
+  instructions: "30 multiple choice. Real Red Seal exam is 100 questions, 4 hours. Pass mark is 70%.",
+  questions: [
+    { category: "Safety & Regulations", q: "What does WHMIS 2015 use to communicate hazards?", options: ["Material Safety Data Sheets only", "Pictograms, signal words, and Safety Data Sheets", "Verbal warnings", "Color codes only"], answer: 1, explanation: "WHMIS 2015 (GHS-aligned) uses pictograms, signal words (Danger/Warning), and SDSs." },
+    { category: "Safety & Regulations", q: "Before starting work near an underground utility, you must:", options: ["Estimate location from surface markings", "Have utility located and marked (BC One Call / Alberta One-Call)", "Dig slowly with a small bucket", "Ask the foreman if it's clear"], answer: 1, explanation: "Always call before you dig. Located and marked utilities are mandatory." },
+    { category: "Safety & Regulations", q: "What's the minimum approach distance for energized overhead power lines under 60 kV?", options: ["1 m", "3 m", "6 m", "10 m"], answer: 1, explanation: "WorkSafeBC: 3 m minimum for under 60 kV. Higher voltages need more clearance." },
+    { category: "Safety & Regulations", q: "What does 'lockout-tagout' protect against?", options: ["Theft of equipment", "Unauthorized startup during maintenance", "Fuel theft", "Vandalism"], answer: 1, explanation: "LOTO ensures stored or live energy can't unexpectedly start the machine during service." },
+    { category: "Safety & Regulations", q: "Under the Fisheries Act, what triggers reporting?", options: ["Working within 30 m of any water", "Deposit of deleterious substance into fish-bearing water", "Operating any equipment near a creek", "Crossing any waterway"], answer: 1, explanation: "Section 36 prohibits depositing harmful substances into fish-bearing waters." },
+
+    { category: "Excavator", q: "When loading a haul truck, the safest swing path is:", options: ["Over the cab", "Behind the truck, 90° from loading position", "From the side, never over the operator's cab", "Diagonally across"], answer: 2, explanation: "Never swing over the truck cab. Approach from the side or rear." },
+    { category: "Excavator", q: "What's the purpose of the swing brake?", options: ["Stop tracks", "Hold the upper structure stationary", "Lock the boom", "Engage hydraulics"], answer: 1, explanation: "Swing brake holds the house from rotating, especially on slopes." },
+    { category: "Excavator", q: "When traveling with an excavator on a slope, the boom should be:", options: ["Raised high for visibility", "Pointed downhill, low to the ground", "Pointed uphill, low to the ground", "Centered over tracks"], answer: 2, explanation: "Boom uphill, bucket low, idler forward going up. Reverse going down. Bucket low for stability." },
+    { category: "Excavator", q: "Track tension is too tight. Most likely result?", options: ["Better traction", "Excessive wear on drive sprocket and track components", "Faster travel", "Improved fuel economy"], answer: 1, explanation: "Over-tight tracks accelerate sprocket, roller, and pin wear." },
+    { category: "Excavator", q: "When digging a trench parallel to the machine, the dig face should be:", options: ["Toward the cab side", "Toward the counterweight side", "Either — operator preference", "On the slope side"], answer: 0, explanation: "Cab side dig = better visibility. Counterweight-side digging is unsafe and harder to see." },
+
+    { category: "Dozer", q: "The straight (S) blade is best for:", options: ["Stockpiling material", "Heavy pushing in a straight line, ripping", "Side-casting at angles", "Fine grading only"], answer: 1, explanation: "Straight blade is rigid, no tilt — heavy pushing and ripping work." },
+    { category: "Dozer", q: "An angle (A) blade allows:", options: ["Tilting only", "Side-casting material at angles up to 25°", "Heavier loads than straight blade", "Carrying material long distances"], answer: 1, explanation: "Angle blade pivots horizontally for side-casting." },
+    { category: "Dozer", q: "Slot dozing means:", options: ["Pushing in a straight slot to retain material", "Side-cutting", "Working on a slope", "Cutting a finished grade"], answer: 0, explanation: "Slot dozing uses spilled material as side walls to keep more in front of the blade." },
+    { category: "Dozer", q: "When working on a side slope, the dozer should:", options: ["Travel across the slope", "Travel up and down the slope", "Travel at any angle", "Park and walk"], answer: 1, explanation: "Up/down minimizes rollover risk. Cross-slope travel is dangerous." },
+    { category: "Dozer", q: "What does a tilt cylinder do on a dozer blade?", options: ["Raises blade up and down", "Tips one corner of the blade lower than the other", "Angles blade left/right", "Locks the blade"], answer: 1, explanation: "Tilt drops one corner — useful for grading and ditching." },
+
+    { category: "Daily Inspection", q: "Pre-operational inspections should be done:", options: ["Once a week", "At the start of every shift", "Only after maintenance", "Only when problems are noticed"], answer: 1, explanation: "Every shift, every operator. Documented." },
+    { category: "Daily Inspection", q: "If a major defect is found during pre-op:", options: ["Operate carefully and report later", "Tag out the machine and report immediately", "Continue if it doesn't affect production", "Have a co-worker check it"], answer: 1, explanation: "Major defect = lockout/tag and immediate report. No operation." },
+    { category: "Daily Inspection", q: "What's the first thing you check before starting an excavator?", options: ["Fuel level", "Walk-around — leaks, damage, attachments, tracks, tires", "Radio", "Cab cleanliness"], answer: 1, explanation: "Walk-around inspection always comes before climbing in." },
+    { category: "Daily Inspection", q: "A hydraulic leak around a cylinder. Action?", options: ["Top up fluid and continue", "Tag out and report", "Wipe it off and watch it", "Continue and check at lunch"], answer: 1, explanation: "Hydraulic leaks can fail catastrophically. Tag and report." },
+
+    { category: "Job Site & Math", q: "A grade stake reads 'C 1.2' in blue. What does this mean?", options: ["Fill 1.2 m here", "Cut 1.2 m here", "Center line 1.2 m offset", "Compaction at 1.2 t"], answer: 1, explanation: "C = cut. Remove 1.2 m of material to reach grade. Blue typically = cut, red = fill (varies by surveyor)." },
+    { category: "Job Site & Math", q: "Calculate volume of a 50 m × 4 m × 1.5 m trench.", options: ["200 m³", "250 m³", "300 m³", "400 m³"], answer: 2, explanation: "50 × 4 × 1.5 = 300 m³." },
+    { category: "Job Site & Math", q: "A 10% grade means:", options: ["10° angle", "10 m rise per 100 m run", "10 cm rise per metre", "Both B and C"], answer: 3, explanation: "10% = 10 per 100 = 1 per 10. Both expressions are correct." },
+    { category: "Job Site & Math", q: "Soil shrinkage of 15% means in-place 100 m³ becomes:", options: ["115 m³ compacted", "85 m³ compacted", "100 m³ compacted", "125 m³ compacted"], answer: 1, explanation: "Shrinkage = compacted volume is less. 100 × 0.85 = 85 m³." },
+
+    { category: "Communication", q: "Standard radio call to a haul truck driver before backing under the bucket?", options: ["'Back up'", "'Truck 7, ready for load'", "'Hurry up'", "'Stand by'"], answer: 1, explanation: "Identify the unit, state condition. 'Truck 7, ready for load.'" },
+    { category: "Communication", q: "Spotter signal — closed fist held up means:", options: ["Continue", "Stop", "Lower bucket", "Turn left"], answer: 1, explanation: "Closed fist = STOP. Universal hand signal." },
+    { category: "Communication", q: "Who has the right of way on a haul road?", options: ["Loaded truck", "Empty truck", "Whoever signals first", "The newest operator"], answer: 0, explanation: "Loaded trucks always have right of way. Harder to stop, harder to restart." },
+
+    { category: "Environment", q: "Riparian zones require:", options: ["No protection", "Special erosion control and setbacks", "Only fish stocking", "Only signage"], answer: 1, explanation: "Riparian = streambank zones. Sediment control, setbacks, often permits required." },
+    { category: "Environment", q: "Refueling on site must:", options: ["Happen anywhere convenient", "Use spill containment, away from drainage", "Only happen at sunrise", "Not be documented"], answer: 1, explanation: "Spill mats, containment, distance from waterways. Document for safety." },
+
+    { category: "Maintenance", q: "Engine oil should be checked:", options: ["Weekly", "Daily, with the engine off and cool", "Only when warning light comes on", "Monthly"], answer: 1, explanation: "Daily check, engine off, on level ground." },
+    { category: "Maintenance", q: "Track pin and bushing wear is measured by:", options: ["Visual inspection only", "Track pitch — distance between pin centers", "Color of pins", "Operator feel"], answer: 1, explanation: "Track pitch grows as components wear. Measured against spec." }
+  ]
+};
+</script>
+<script src="practice-test.js"></script>
+</body>
+</html>

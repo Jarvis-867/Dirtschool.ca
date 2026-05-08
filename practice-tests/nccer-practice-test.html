@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free NCCER Heavy Equipment Practice Test — 25 Questions | Dirt School</title>
+<meta name="description" content="Free 25-question NCCER Heavy Equipment Operator practice test. OSHA, all machine types. Instant scoring. No signup.">
+<link rel="canonical" href="https://dirtschool.ca/practice-tests/nccer-practice-test.html">
+<link rel="stylesheet" href="practice-test.css">
+</head>
+<body>
+<div class="container">
+  <a class="back-link" href="/">← Back to Dirt School</a>
+  <div class="header">
+    <h1>Free <span class="accent">NCCER</span> Practice Test</h1>
+    <p>25 questions • USA Curriculum • Instant scoring</p>
+  </div>
+  <div id="start-screen" class="start-screen"></div>
+  <div id="test-screen" class="test-screen"></div>
+  <div id="results-screen" class="results-screen"></div>
+  <footer>
+    Built by operators, for operators. © Dirt School · <a href="https://dirtschool.ca">dirtschool.ca</a>
+  </footer>
+</div>
+
+<script>
+const TEST_CONFIG = {
+  title: "NCCER Heavy Equipment — Free Practice",
+  description: "USA NCCER curriculum. OSHA safety, all machine types.",
+  guideName: "NCCER Heavy Equipment",
+  guideUrl: "https://dirtschool.gumroad.com/l/nccer-heo-guide",
+  timeLimitMin: 35,
+  passMark: 70,
+  shuffle: false,
+  instructions: "25 multiple choice. Pass mark 70%.",
+  questions: [
+    { category: "OSHA Safety", q: "OSHA requires fall protection for work at heights of:", options: ["4 feet (general industry)", "6 feet (construction)", "Both A and B", "10 feet only"], answer: 2, explanation: "4 ft general industry, 6 ft construction. Both apply depending on the standard." },
+    { category: "OSHA Safety", q: "PPE for heavy equipment operators on a typical site includes:", options: ["Hard hat only", "Hard hat, hi-vis vest, safety boots, eye protection", "Boots only", "Whatever the operator prefers"], answer: 1, explanation: "Standard PPE: hard hat, hi-vis (Class 2 minimum), steel-toe boots, eye protection, hearing as needed." },
+    { category: "OSHA Safety", q: "Trenches deeper than how many feet require a protective system (sloping, shoring, or shielding)?", options: ["3 ft", "4 ft", "5 ft", "6 ft"], answer: 2, explanation: "OSHA: 5 ft+ requires a protective system unless cut entirely in stable rock." },
+    { category: "OSHA Safety", q: "Soil Type C in OSHA classification is:", options: ["Most stable", "Cohesive, stable", "Granular, least stable, requires 1.5:1 slope", "Rock only"], answer: 2, explanation: "Type C = least stable. 1.5:1 slope (1.5 horizontal to 1 vertical)." },
+    { category: "OSHA Safety", q: "Lockout/tagout is required when:", options: ["Any maintenance", "Servicing equipment where unexpected start could cause injury", "End of shift only", "Refueling"], answer: 1, explanation: "29 CFR 1910.147 — LOTO whenever unexpected energization could injure." },
+
+    { category: "Excavator", q: "The first mechanical operation when starting an excavator is:", options: ["Move the boom", "Idle and check gauges/warning lights for proper readings", "Swing the house", "Travel test"], answer: 1, explanation: "Always idle, monitor gauges, warm up before operating." },
+    { category: "Excavator", q: "Maximum slope for an excavator's safe operation is generally:", options: ["20°", "30° (machine-dependent — check manual)", "45°", "60°"], answer: 1, explanation: "Around 30° is general safe limit. Always check manufacturer specs." },
+    { category: "Excavator", q: "When trenching, the spoil pile should be:", options: ["Right at the edge", "At least 2 feet from the edge", "On both sides equally", "Wherever convenient"], answer: 1, explanation: "OSHA: spoil pile ≥ 2 ft from the trench edge to prevent collapse and falls." },
+
+    { category: "Dozer", q: "A dozer's primary function is:", options: ["Lifting", "Pushing material", "Digging trenches", "Hauling material long distances"], answer: 1, explanation: "Dozers push. Short-distance moves only." },
+    { category: "Dozer", q: "The most efficient dozing distance is generally:", options: ["Under 100 ft", "100-300 ft", "Over 500 ft", "1000+ ft"], answer: 1, explanation: "Under ~300 ft. Over that, switch to scrapers or trucks." },
+    { category: "Dozer", q: "A PAT blade (Power Angle Tilt) allows:", options: ["Power only", "Hydraulic angle and tilt from cab", "Manual adjustment only", "No adjustment"], answer: 1, explanation: "PAT = Power Angle Tilt — full hydraulic control from cab." },
+
+    { category: "Loader", q: "A wheel loader's bucket should be carried during travel:", options: ["High for visibility", "Low to the ground for stability", "Mid-height", "It doesn't matter"], answer: 1, explanation: "Low bucket = lower center of gravity = stability." },
+    { category: "Loader", q: "When loading a truck with a wheel loader, the safest approach is:", options: ["From the front", "From the rear", "From the side at 45° (V-pattern or pass-through)", "From above"], answer: 2, explanation: "V-pattern (45° approach) is most efficient. Never load over operator cab." },
+
+    { category: "Grader", q: "A motor grader's primary function is:", options: ["Digging trenches", "Fine grading and finishing surfaces", "Heavy excavation", "Pushing trees"], answer: 1, explanation: "Graders fine-grade. Not for heavy moving." },
+    { category: "Grader", q: "Moldboard angle for general grading is approximately:", options: ["10°", "30-45°", "75°", "90°"], answer: 1, explanation: "30-45° is the typical setting for spreading and grading." },
+
+    { category: "Math & Calc", q: "Convert 27 cubic yards to cubic feet (1 yd³ = 27 ft³).", options: ["540 ft³", "729 ft³", "810 ft³", "27 ft³"], answer: 1, explanation: "27 × 27 = 729 ft³." },
+    { category: "Math & Calc", q: "A truck holds 14 cubic yards. To move 168 cubic yards, how many trips?", options: ["10", "12", "14", "16"], answer: 1, explanation: "168 ÷ 14 = 12 trips." },
+    { category: "Math & Calc", q: "Slope of 2:1 means:", options: ["2 ft horizontal per 1 ft vertical", "1 ft horizontal per 2 ft vertical", "2-degree angle", "Doesn't matter"], answer: 0, explanation: "Slope ratio is run:rise. 2:1 = 2 horizontal for every 1 vertical. Gentler slope." },
+
+    { category: "Communication", q: "Hand signal — both arms held horizontal means:", options: ["Stop", "Lower load", "Boom down or extend", "Emergency"], answer: 0, explanation: "Crane signals vary, but arms-out horizontal often = stop or hold position. Always confirm with crew." },
+    { category: "Communication", q: "Two-way radio communication should:", options: ["Use slang", "Use clear, short, identifying language", "Be casual", "Avoid identifiers"], answer: 1, explanation: "Identify, message, end. 'Truck 4 to loader, ready for load.'" },
+
+    { category: "Environment", q: "What's a SWPPP?", options: ["Storm Water Pollution Prevention Plan", "Site Worker PPE Program", "Surface Water Plant Permit", "Slope Watch Plan"], answer: 0, explanation: "EPA-required Storm Water Pollution Prevention Plan for construction sites." },
+    { category: "Environment", q: "Silt fencing is used to:", options: ["Mark property lines", "Trap sediment in stormwater runoff", "Keep wildlife out", "Block dust"], answer: 1, explanation: "Silt fence retains sediment so it doesn't enter waterways." },
+
+    { category: "Practical Eval", q: "Things that fail you instantly on a practical eval:", options: ["Slow operation", "Working without seatbelt, ignoring spotter, unsafe swing path", "Asking questions", "Taking a break"], answer: 1, explanation: "Safety failures = automatic fail. Slow but safe is fine." },
+    { category: "Practical Eval", q: "Before exiting the cab on a practical test:", options: ["Just hop out", "Lower attachment, set parking brake, neutral, lockout controls, engine off", "Leave it running", "Set parking brake only"], answer: 1, explanation: "Full shutdown sequence. Skipping any step = points off or fail." },
+    { category: "Practical Eval", q: "Smooth operation is graded on:", options: ["Speed only", "Control of jerky movements, accuracy, safe positioning", "How fast you finish", "Fuel use"], answer: 1, explanation: "Smooth = controlled. Jerky inputs = points off." }
+  ]
+};
+</script>
+<script src="practice-test.js"></script>
+</body>
+</html>

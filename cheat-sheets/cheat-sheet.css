@@ -1,0 +1,292 @@
+/* Dirt School Cheat Sheet — shared styles
+   Dark theme online. Auto-converts to print-friendly when user prints. */
+
+:root {
+  --bg: #0d0f12;
+  --bg-card: #16191e;
+  --bg-card-2: #1c2026;
+  --border: #2a2f37;
+  --text: #e8eaed;
+  --text-muted: #9aa0a6;
+  --accent: #f59e0b;
+  --accent-hover: #fbbf24;
+  --critical: #ef4444;
+  --good: #22c55e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--accent); }
+
+.header {
+  text-align: center;
+  padding: 30px 20px;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.header h1 .accent { color: var(--accent); }
+.header .subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.print-bar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: var(--accent);
+  color: #000;
+  border: none;
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover { background: var(--bg-card-2); }
+
+/* Sections */
+.section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px 25px;
+  margin-bottom: 20px;
+  break-inside: avoid;
+}
+
+.section h2 {
+  color: var(--accent);
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.section h3 {
+  font-size: 1rem;
+  margin: 14px 0 8px;
+  color: var(--text);
+}
+
+.section p { margin-bottom: 10px; }
+.section p:last-child { margin-bottom: 0; }
+
+ul, ol {
+  padding-left: 22px;
+  margin-bottom: 10px;
+}
+li { margin-bottom: 5px; }
+
+/* Two-column layout for compact info */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+/* Tables for reference data */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 0.92rem;
+}
+th, td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+}
+th {
+  background: var(--bg-card-2);
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+tr:last-child td { border-bottom: none; }
+
+/* Callouts */
+.callout {
+  background: var(--bg-card-2);
+  border-left: 4px solid var(--accent);
+  padding: 12px 16px;
+  margin: 12px 0;
+  border-radius: 4px;
+}
+.callout.critical { border-left-color: var(--critical); }
+.callout.good { border-left-color: var(--good); }
+.callout strong { color: var(--accent); }
+.callout.critical strong { color: var(--critical); }
+.callout.good strong { color: var(--good); }
+
+/* Formula boxes */
+.formula {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 8px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+/* Checklist style */
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+.checklist li {
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 8px;
+}
+.checklist li::before {
+  content: "☐";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Critical numbers card */
+.critical-numbers {
+  background: var(--bg-card-2);
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  padding: 18px;
+  margin: 15px 0;
+}
+.critical-numbers h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--accent);
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-left: 8px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(245, 158, 11, 0.02));
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  margin-top: 30px;
+  break-inside: avoid;
+}
+.cta-box h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.cta-box p {
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+footer a { color: var(--accent); text-decoration: none; }
+
+/* PRINT STYLES — invert to clean black-on-white */
+@media print {
+  :root {
+    --bg: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-2: #f5f5f5;
+    --border: #cccccc;
+    --text: #000000;
+    --text-muted: #555555;
+    --accent: #cc6600;
+  }
+  body { padding: 0; background: white; color: black; }
+  .back-link, .print-bar, footer .no-print { display: none !important; }
+  .section, .cta-box, .critical-numbers {
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+  .section h2, .header h1 .accent, .formula, .callout strong {
+    color: #cc6600 !important;
+  }
+  .header { padding: 10px 0; border-bottom: 2px solid #000; }
+  body { font-size: 10pt; }
+  h1 { font-size: 18pt !important; }
+  h2 { font-size: 12pt !important; }
+  h3 { font-size: 11pt !important; }
+  a { color: black; text-decoration: none; }
+  .cta-box { border: 2px solid #cc6600; }
+}

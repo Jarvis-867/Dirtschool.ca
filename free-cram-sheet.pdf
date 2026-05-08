@@ -1,0 +1,110 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 4 0 R >> >> /MediaBox [0 0 612 792] /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1500 >>
+stream
+BT
+/F1 24 Tf
+50 700 Td
+(IUOE APTITUDE TEST - 10 MINUTE CRAM SHEET) Tj
+0 -40 Td
+/F1 12 Tf
+(All formulas, conversions, and exam traps on one page) Tj
+0 -50 Td
+/F1 14 Tf
+(MATH FORMULAS) Tj
+0 -25 Td
+/F1 10 Tf
+(Percent Grade = (Rise / Run) x 100) Tj
+0 -15 Td
+(Bank Cubic Yards = Loose Cubic Yards / Swell Factor) Tj
+0 -15 Td
+(Cut/Fill Volume = Length x Width x (Cut or Fill Depth)) Tj
+0 -15 Td
+(Equipment Production = Volume / Time) Tj
+0 -15 Td
+(Fuel Consumption = Hours / Fuel Tank Capacity) Tj
+0 -40 Td
+/F1 14 Tf
+(HYDRAULIC PRESSURE) Tj
+0 -25 Td
+/F1 10 Tf
+(1 PSI = 6.89 kPa) Tj
+0 -15 Td
+(1 Bar = 14.5 PSI) Tj
+0 -15 Td
+(Flow Rate = Pump Displacement x RPM) Tj
+0 -40 Td
+/F1 14 Tf
+(COMMON UNIT CONVERSIONS) Tj
+0 -25 Td
+/F1 10 Tf
+(1 yard = 3 feet) Tj
+0 -15 Td
+(1 cubic yard = 27 cubic feet) Tj
+0 -15 Td
+(1 mile = 5,280 feet) Tj
+0 -15 Td
+(1 gallon = 3.785 liters) Tj
+0 -15 Td
+(1 ton = 2,000 pounds) Tj
+0 -40 Td
+/F1 14 Tf
+(EXAM TRAPS TO AVOID) Tj
+0 -25 Td
+/F1 10 Tf
+(- Watch unit conversions (cubic yards vs feet)) Tj
+0 -15 Td
+(- Percent grade is RISE/RUN, not vice versa) Tj
+0 -15 Td
+(- Mechanical questions test your reasoning, not memory) Tj
+0 -15 Td
+(- Time management: move on if stuck for 2+ minutes) Tj
+0 -15 Td
+(- Read questions twice - look for "NOT" or "EXCEPT") Tj
+0 -40 Td
+/F1 14 Tf
+(EQUIPMENT SPECS TO KNOW) Tj
+0 -25 Td
+/F1 10 Tf
+(- Excavator bucket sizes: 0.5 to 3+ cubic yards) Tj
+0 -15 Td
+(- Dozer blade capacities: 5 to 15 cubic yards) Tj
+0 -15 Td
+(- Loader bucket: 2 to 5 cubic yards) Tj
+0 -15 Td
+(- Grader: 14 to 20 foot blade width) Tj
+0 -40 Td
+/F1 12 Tf
+(Good luck. You already know this. Just trust yourself.) Tj
+0 -30 Td
+(Built by operators, for operators.) Tj
+0 -15 Td
+(dirtschool.ca) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000214 00000 n 
+0000000303 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1853
+%%EOF
