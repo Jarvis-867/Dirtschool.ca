@@ -303,7 +303,7 @@ function handleEmailSubmit(e) {
   btn.style.background = '#2a7a2a';
   emailInput.disabled = true;
   btn.disabled = true;
-  fetch('/api/signup', {
+  fetch('https://patient-sky-e815.nightcitybeats867.workers.dev/signup', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({email: emailInput.value, source: window.location.pathname, ts: new Date().toISOString()})
