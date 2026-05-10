@@ -721,15 +721,24 @@ function handleSubmit(e) {
   e.preventDefault();
   const emailInput = e.target.querySelector('input[type="email"]');
   const btn = e.target.querySelector('button');
-  btn.textContent = '✓ Subscribed!';
-  btn.style.background = '#2a7a2a';
-  emailInput.disabled = true;
+  btn.textContent = 'Sending...';
   btn.disabled = true;
-  fetch('https://patient-sky-e815.nightcitybeats867.workers.dev/signup', {
+  fetch('https://api.dirtschool.ca/signup', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({email: emailInput.value, ts: new Date().toISOString()})
-  }).catch(() => {});
+  }).then(response => {
+    if (!response.ok) throw new Error('Server error');
+    btn.textContent = '✓ Subscribed!';
+    btn.style.background = '#2a7a2a';
+    emailInput.disabled = true;
+  }).catch(err => {
+    console.error('Signup error:', err);
+    btn.textContent = 'Connection error. Try again.';
+    btn.style.background = '#a02020';
+    btn.disabled = false;
+    emailInput.disabled = false;
+  });
 }
 </script>
 
