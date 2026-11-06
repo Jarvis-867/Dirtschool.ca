@@ -93,7 +93,7 @@ async function submitForm(e) {
   e.preventDefault();
   const email = document.getElementById('email-input').value;
   try {
-    await fetch('https://dirtschool.ca/signup', {
+    await fetch('https://api.dirtschool.ca/signup', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({email, source: 'pretrip-cheatsheet'})
