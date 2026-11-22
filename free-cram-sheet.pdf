@@ -12,7 +12,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 5 0 obj
-<< /Length 1500 >>
+<< /Length 1714 >>
 stream
 BT
 /F1 24 Tf
@@ -34,7 +34,7 @@ BT
 0 -15 Td
 (Equipment Production = Volume / Time) Tj
 0 -15 Td
-(Fuel Consumption = Hours / Fuel Tank Capacity) Tj
+(Fuel Consumption \(L/hr\) = Fuel Used / Hours Operated) Tj
 0 -40 Td
 /F1 14 Tf
 (HYDRAULIC PRESSURE) Tj
@@ -101,10 +101,10 @@ xref
 0000000009 00000 n 
 0000000058 00000 n 
 0000000115 00000 n 
-0000000214 00000 n 
-0000000303 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
 trailer
 << /Size 6 /Root 1 0 R >>
 startxref
-1853
+2077
 %%EOF
