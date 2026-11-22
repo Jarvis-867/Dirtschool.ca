@@ -21,10 +21,10 @@
     nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; border-bottom: 1px solid #1a1a1a; position: sticky; top: 0; background: #0d0d0d; z-index: 100; }
     .logo { font-size: 1.4rem; font-weight: 900; color: #f0ede8; text-decoration: none; letter-spacing: -0.5px; }
     .logo span { color: #e8a020; }
-    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; margin-left: auto; }
     .nav-links a { color: #aaa; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
     .nav-links a:hover { color: #f0ede8; }
-    .nav-cta { background: #e8a020 !important; color: #0d0d0d !important; font-weight: 700 !important; padding: 0.5rem 1.2rem; border-radius: 6px; }
+    .nav-cta { background: #e8a020 !important; color: #0d0d0d !important; font-weight: 700 !important; padding: 0.5rem 1.2rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; margin-left: 1.5rem; white-space: nowrap; }
     .nav-dropdown { position: relative; }
     .nav-dropdown > a { color: #aaa; text-decoration: none; font-size: 0.9rem; cursor: pointer; user-select: none; }
     .nav-dropdown.open > a { color: #f0ede8; }
@@ -115,8 +115,18 @@
     footer { border-top: 1px solid #1a1a1a; padding: 2rem; text-align: center; color: #444; font-size: 0.85rem; }
     footer span { color: #e8a020; }
 
-    @media (max-width: 600px) {
+    /* Nav: full row needs ~840px; below that, logo + CTA on top, links in a swipeable row */
+    @media (max-width: 880px) {
+      nav { flex-wrap: wrap; row-gap: 0.6rem; padding: 0.9rem 1rem; }
+      .nav-cta { order: 1; margin-left: auto; padding: 0.45rem 0.9rem; }
+      .nav-links { order: 2; width: 100%; margin-left: 0; gap: 1.25rem; overflow-x: auto; scrollbar-width: none; }
+      .nav-links::-webkit-scrollbar { display: none; }
+      .nav-links { -webkit-mask-image: linear-gradient(to right, #000 88%, transparent); mask-image: linear-gradient(to right, #000 88%, transparent); padding-right: 2rem; }
+      .nav-links a { white-space: nowrap; }
       .nav-links .nav-link-hide { display: none; }
+    }
+
+    @media (max-width: 600px) {
       .btn-secondary { margin-left: 0; margin-top: 0.5rem; }
       .trust-points { gap: 1.5rem; }
     }
@@ -152,8 +162,8 @@
       </div>
     </div>
     <a href="/blog/index.html">Blog</a>
-    <a href="https://dirtschool.gumroad.com" class="nav-cta">Get the Guides →</a>
   </div>
+  <a href="https://dirtschool.gumroad.com" class="nav-cta">Get the Guides →</a>
 </nav>
 
 <!-- HERO -->
