@@ -1,0 +1,144 @@
+/* Shared stylesheet for blog and encyclopedia pages that use the
+   .navbar / .blog-container / .blog-post templates.
+   Light article body, dark header bar, Dirt School orange accent. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #222;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+}
+
+img, table { max-width: 100%; }
+a { color: #b8740a; }
+a:hover { color: #8a5500; }
+
+/* Header bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    padding: 0.9rem 1.5rem;
+    background: #0d0d0d;
+    border-bottom: 1px solid #222;
+}
+.navbar .logo {
+    color: #e8a020;
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.navbar .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navbar .nav-links a {
+    color: #f0ede8;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+.navbar .nav-links a:hover { color: #e8a020; }
+
+/* Article column */
+.blog-container,
+.blog-post {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 3rem;
+}
+.blog-container .blog-post { padding: 0; max-width: none; }
+
+h1, h2, h3, h4 { color: #111; line-height: 1.25; }
+h1 { font-size: 2.1rem; margin: 0.5rem 0 0.75rem; }
+h2 { font-size: 1.5rem; margin: 2.25rem 0 0.75rem; padding-bottom: 0.35rem; border-bottom: 2px solid #e8a020; }
+h3 { font-size: 1.2rem; margin: 1.75rem 0 0.5rem; }
+p, ul, ol { margin: 0 0 1.1rem; }
+ul, ol { padding-left: 1.4rem; }
+li { margin: 0.35rem 0; }
+
+.meta, .post-date { color: #777; font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+blockquote {
+    margin: 1.5rem 0;
+    padding: 0.75rem 1.25rem;
+    border-left: 4px solid #e8a020;
+    background: #faf7f2;
+    color: #444;
+}
+
+code { background: #f3f3f3; padding: 0.1em 0.35em; border-radius: 3px; font-size: 0.92em; }
+
+/* Tables scroll sideways on phones instead of widening the page */
+table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+}
+th, td { border: 1px solid #ddd; padding: 0.6rem 0.75rem; text-align: left; vertical-align: top; }
+th { background: #0d0d0d; color: #e8a020; }
+
+/* Boxes (pages may override these with their own inline styles) */
+.cta-box {
+    background: #f5f5f5;
+    border-left: 4px solid #e8a020;
+    padding: 1.25rem;
+    margin: 2rem 0;
+    border-radius: 4px;
+}
+/* Rows of product buttons inside a CTA box wrap on narrow screens */
+.cta-box > div { flex-wrap: wrap; }
+.cta-button {
+    display: inline-block;
+    background: #e8a020;
+    color: #0d0d0d;
+    padding: 0.65rem 1.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+}
+.cta-button:hover { background: #f0b040; color: #0d0d0d; }
+
+.internal-links {
+    margin: 2.5rem 0 0;
+    padding: 1.25rem;
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+
+/* Footer */
+.blog-footer {
+    margin-top: 2rem;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999;
+    background: #0d0d0d;
+}
+.blog-footer p { margin: 0.25rem 0; }
+.blog-footer a { color: #e8a020; }
+
+@media (max-width: 600px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.3rem; }
+    .navbar { padding: 0.75rem 1rem; }
+    /* Some pages set two-column button grids and nowrap buttons inline */
+    .cta-box > div[style*="grid"] { grid-template-columns: 1fr !important; }
+    .cta-box a { white-space: normal !important; }
+}
