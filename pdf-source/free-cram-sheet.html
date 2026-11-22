@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+  Source for /free-cram-sheet.pdf. Edit this file, then rebuild the PDF:
+    powershell -ExecutionPolicy Bypass -File pdf-source/build-cram-sheet.ps1
+  The build prints this page to US Letter with a Chromium-based browser.
+  Everything must fit on one page; the build script fails if it doesn't.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<title>IUOE Aptitude Test - 10 Minute Cram Sheet | Dirt School</title>
+<style>
+  @page { size: Letter; margin: 0.5in 0.7in; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: Helvetica, Arial, sans-serif; color: #000; background: #fff; }
+  h1 { font-size: 20pt; font-weight: normal; line-height: 1.2; white-space: nowrap; }
+  .sub { font-size: 12pt; margin-top: 8pt; }
+  h2 { font-size: 14pt; font-weight: normal; margin-top: 16pt; margin-bottom: 5pt; }
+  ul { list-style: none; }
+  li { font-size: 10pt; line-height: 14pt; }
+  li.ex { padding-left: 14pt; color: #333; }
+  footer { margin-top: 18pt; font-size: 12pt; line-height: 16pt; }
+  footer p + p { margin-top: 8pt; }
+</style>
+</head>
+<body>
+  <h1>IUOE APTITUDE TEST - 10 MINUTE CRAM SHEET</h1>
+  <p class="sub">All formulas, conversions, and exam traps on one page</p>
+
+  <h2>MATH FORMULAS</h2>
+  <ul>
+    <li>Percent Grade = (Rise / Run) x 100</li>
+    <li>Bank Cubic Yards (BCY) = Loose Cubic Yards (LCY) &divide; (1 + swell %)</li>
+    <li class="ex">Example: 125 LCY at 25% swell = 125 &divide; 1.25 = 100 BCY</li>
+    <li>Cut/Fill Volume = Length x Width x (Cut or Fill Depth)</li>
+    <li class="ex">Measured in feet? Divide by 27 for cubic yards</li>
+    <li>Equipment Production = Volume / Time</li>
+    <li>Fuel Consumption (L/hr) = Fuel Used / Hours Operated</li>
+  </ul>
+
+  <h2>HYDRAULIC PRESSURE</h2>
+  <ul>
+    <li>1 PSI = 6.89 kPa</li>
+    <li>1 Bar = 14.5 PSI</li>
+  </ul>
+
+  <h2>HYDRAULIC FLOW</h2>
+  <ul>
+    <li>Flow Rate = Pump Displacement x RPM</li>
+    <li>GPM = Displacement (cu in/rev) x RPM &divide; 231</li>
+    <li>L/min = Displacement (cc/rev) x RPM &divide; 1,000</li>
+  </ul>
+
+  <h2>COMMON UNIT CONVERSIONS</h2>
+  <ul>
+    <li>1 yard = 3 feet</li>
+    <li>1 cubic yard = 27 cubic feet</li>
+    <li>1 mile = 5,280 feet</li>
+    <li>1 US gallon = 3.785 liters &nbsp;|&nbsp; 1 imperial gallon = 4.546 liters</li>
+    <li>1 short ton (US) = 2,000 pounds &nbsp;|&nbsp; 1 metric tonne = 1,000 kg &asymp; 2,205 pounds</li>
+  </ul>
+
+  <h2>EXAM TRAPS TO AVOID</h2>
+  <ul>
+    <li>- Watch unit conversions (cubic yards vs feet)</li>
+    <li>- Percent grade is RISE/RUN, not vice versa</li>
+    <li>- Mechanical questions test your reasoning, not memory</li>
+    <li>- Time management: move on if stuck for 2+ minutes</li>
+    <li>- Read questions twice - look for "NOT" or "EXCEPT"</li>
+  </ul>
+
+  <h2>EQUIPMENT SPECS TO KNOW</h2>
+  <ul>
+    <li>- Excavator bucket sizes: 0.5 to 3+ cubic yards</li>
+    <li>- Dozer blade capacities: about 2 to 45 cubic yards (5 to 15 typical for mid-size, D6-D8)</li>
+    <li>- Loader bucket: 2 to 5 cubic yards</li>
+    <li>- Grader: 12 to 16 foot blade on most road graders; up to 24 ft on mining graders</li>
+  </ul>
+
+  <footer>
+    <p>Good luck. You already know this. Just trust yourself.</p>
+    <p>Built by operators, for operators.<br>dirtschool.ca</p>
+  </footer>
+</body>
+</html>
